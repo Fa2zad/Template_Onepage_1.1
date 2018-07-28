@@ -2,7 +2,52 @@
 //              Counter              //
 //       Called by _main.scss        //
 //-----------------------------------//
-.slider__container{
+.slider__container {
     height: 800px;
     background-color: $themeColor;
+    .slider-timebar{
+        height: 5px;
+        width: 80%;
+        background: rgba(#fff, 0.5);
+        position: absolute;
+        z-index: 1;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0px;
+        line-height: 42px;
+        li {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            font-size: 15px;
+            i{
+                font-size: 18px;
+                margin-left: 10px;
+            }
+            
+            figure {
+                position: absolute;
+                top: 27%;
+                width: 80%;
+                right: 10%;
+                img{
+                    float: right;
+                }
+                figcaption{
+                    float: left;
+                    margin-top: 50px;
+                    text-align: left;
+                    h1, h2, h3, h4, h5, h6, p, small, li{
+                        color: white;
+                    }
+                    hr{
+                        border-color: white;
+                        width: 110px;
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+    }
 }

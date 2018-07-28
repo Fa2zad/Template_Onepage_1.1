@@ -33,7 +33,7 @@
         }
         
     }
-    h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span, img  {
+    h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span, img, figure  {
         @if ($debugInners) { // visualizing layout internals
             border: 1px dotted rgb(255, 72, 0);
             @content;

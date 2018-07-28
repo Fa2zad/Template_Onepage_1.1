@@ -10,6 +10,7 @@
   top: 70px;
   position: absolute;
   width: 100%;
+  z-index: 10;
 }
 
 .header__container nav {
@@ -76,6 +77,7 @@ body {
   font-size: 14px;
   font-family: vazir;
   direction: rtl;
+  text-align: right;
 }
 
 body a {
@@ -101,8 +103,138 @@ body input.form-control:focus {
           transition-duration: 500ms;
 }
 
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  position: relative;
+  color: #3e4041;
+  letter-spacing: 0.5px;
+}
+
+body h1 small,
+body h2 small,
+body h3 small,
+body h4 small,
+body h5 small,
+body h6 small {
+  position: absolute;
+  top: -115%;
+  left: 0;
+  right: 0;
+  letter-spacing: 0px;
+}
+
+body hr {
+  border-top: 2px solid #ed484b;
+  width: 40px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+body .theme-button {
+  padding: 20px 0;
+  color: #5e5e5e;
+  background-color: #e1e1e1;
+  border-radius: 3px;
+  padding: 11px 24px;
+  border: none;
+  letter-spacing: 1px;
+}
+
+body .theme-button:visited,
+body .theme-button :active {
+  color: #5e5e5e;
+  text-decoration: none;
+}
+
+body .theme-button:hover,
+body .theme-button :focus {
+  -webkit-animation: pulse 0.8s;
+          animation: pulse 0.8s;
+  -webkit-box-shadow: 0 0 10px 30px rgba(255, 255, 255, 0);
+          box-shadow: 0 0 10px 30px rgba(255, 255, 255, 0);
+  background-color: #ed484b;
+  text-decoration: none;
+  color: white;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #ed484b;
+            box-shadow: 0 0 0 0 #ed484b;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #ed484b;
+            box-shadow: 0 0 0 0 #ed484b;
+  }
+}
+
+body .theme-button--dark {
+  color: white;
+  background-color: #333333;
+}
+
 .slider__container {
   height: 800px;
   background-color: #ed484b;
+}
+
+.slider__container .slider-timebar {
+  height: 5px;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  z-index: 1;
+}
+
+.slider__container ul {
+  list-style-type: none;
+  padding: 0px;
+  line-height: 42px;
+}
+
+.slider__container ul li {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-size: 15px;
+}
+
+.slider__container ul li i {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.slider__container ul li figure {
+  position: absolute;
+  top: 27%;
+  width: 80%;
+  right: 10%;
+}
+
+.slider__container ul li figure img {
+  float: right;
+}
+
+.slider__container ul li figure figcaption {
+  float: left;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.slider__container ul li figure figcaption h1, .slider__container ul li figure figcaption h2, .slider__container ul li figure figcaption h3, .slider__container ul li figure figcaption h4, .slider__container ul li figure figcaption h5, .slider__container ul li figure figcaption h6, .slider__container ul li figure figcaption p, .slider__container ul li figure figcaption small, .slider__container ul li figure figcaption li {
+  color: white;
+}
+
+.slider__container ul li figure figcaption hr {
+  border-color: white;
+  width: 110px;
+  margin-left: 0px;
 }
 /*# sourceMappingURL=style.css.map */

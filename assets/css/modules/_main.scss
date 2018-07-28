@@ -7,6 +7,7 @@ body {
     font-size: $regularFontSize;
     font-family: $regularFont;
     direction: rtl;
+    text-align: right;
     a {
         color: $regularFontColor;
         &.active,
@@ -27,9 +28,64 @@ body {
             transition-duration: 500ms;
         }
     }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        color: #3e4041;
+        letter-spacing: 0.5px;
+        small {
+            position: absolute;
+            top: -115%;
+            left: 0;
+            right: 0;
+            letter-spacing: 0px;
+        }
+    }
+    hr {
+        border-top: 2px solid $themeColor;
+        width: 40px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    } // theme-button
+    .theme-button {
+        padding: 20px 0;
+        color: $regularFontColor;
+        background-color: #e1e1e1;
+        border-radius: 3px;
+        padding: 11px 24px;
+        border: none;
+        letter-spacing: 1px;
+        &:visited,
+        :active {
+            color: $regularFontColor;
+            text-decoration: none;
+        }
+        &:hover,
+        :focus {
+            animation: pulse 0.8s;
+            box-shadow: 0 0 10px 30px rgba(#fff, 0);
+            background-color: $buttonColor;
+            text-decoration: none;
+            color: white;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 $buttonColor;
+            }
+        }
+        &--dark {
+            color: white;
+            background-color: #333333;
+        }
+    }
 }
 
 //==============Modules==============//
+//---------from /main_modules--------//
 //-----------------------------------//
 //               slider              //
 //-----------------------------------//
