@@ -1,0 +1,10 @@
+//-----------------------------------//
+//               Main                //
+//        called by style.scss       //
+//-----------------------------------//
+body{
+    color: $regularFontColor;
+    font-size: $regularFontSize;
+    font-family: $regularFont;
+    direction: rtl;
+}

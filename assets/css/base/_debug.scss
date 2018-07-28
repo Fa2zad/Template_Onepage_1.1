@@ -1,0 +1,47 @@
+//$debugGlobal: $debug; // body, header, main, footer
+//$debugDivisions: $debug; // section, article, div
+//$debugInners: $debug;
+
+@mixin debug($debugGlobal: false, $debugDivisions: false, $debugInners: false){
+    body,  {
+        @if ($debugGlobal) { // visualizing layout internals
+            border: 3px solid black;
+            header, main, footer{
+                @if ($debugGlobal) { // visualizing layout internals
+                    border: 2px dashed rgba(0, 0, 255, 1);
+                }
+            }
+            @content
+        }
+    }
+    
+    section, article, aside, div {
+        @if ($debugDivisions) { // visualizing layout internals
+            border: 1px dotted rgb(0, 117, 196);
+            
+
+            >section, >div{
+                @if ($debugDivisions) { // visualizing layout internals
+                    border: 1px solid rgb(19, 160, 0);
+                    >section, >div{
+                        @if ($debugDivisions) { // visualizing layout internals
+                            border: 1px dashed rgb(255, 0, 0);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span, img  {
+        @if ($debugInners) { // visualizing layout internals
+            border: 1px dotted rgb(255, 72, 0);
+            @content;
+            >h1, >h2, >h3, >h4, >h5, >h6, >p, >ul, >ol, >li, >a, >span, >img ,>small  {
+            border: 1px solid rgb(255, 196, 0);
+
+            }
+        }
+    }
+
+}

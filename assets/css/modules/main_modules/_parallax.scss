@@ -1,0 +1,42 @@
+//-----------------------------------//
+//             parallax              //
+//       Called by _main.scss        //
+//-----------------------------------//
+.parallax__container{
+    background-image: url('../images/parallex.jpg');
+    background-position-x: -200px;
+    background-attachment: fixed;
+
+    text-align: center;
+    color: #fefefe;
+    padding: 85px 0px 30px;
+    h3{
+        color: #fefefe;
+        small{
+            color: #fefefe;
+        }
+    }
+    p{
+        margin: 35px 70px 30px 70px;
+        line-height: 25px;
+    }
+    hr{
+        border-top-color: #fefefe;
+        margin-top: 30px;
+    }
+    
+    ul{
+        list-style-type: none;
+        padding: 0px;
+        display: inline-block;
+        direction: ltr;
+        li{
+            margin: 0px 37px;
+            float: left;
+            display: inline-block;
+        }
+        .parallax-icon{
+            font-size: 20px;
+        }
+    }
+}

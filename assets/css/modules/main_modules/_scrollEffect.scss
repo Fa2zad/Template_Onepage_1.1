@@ -1,0 +1,67 @@
+//-----------------------------------//
+//           Scroll Effect           //
+//       Called by _main.scss        //
+//-----------------------------------//
+//Before scroll styles write here, and use scrollEffect.js methods to reverse style by animation.
+.intro__container{
+    .row{
+        >div{
+            margin-top: 100px;
+            opacity: 0;
+        }
+    }
+}
+.contentslider__container{
+    opacity: 0;
+    .contentslider-text >:last-child{
+        margin-right: -100px;
+    }
+}
+
+.portfolio__container{
+    opacity: 0;
+    margin-top: 100px;
+    
+    .container div{
+        opacity: 0;
+        margin-top: -100px;
+    }
+}
+
+.counter__container .counter-items > div{
+    margin-top: 50px;
+}
+
+
+
+.tabletslider__container{
+    opacity: 0;
+    margin-right: -100px;
+}
+
+.aroundimage__container{
+    opacity: 0;
+    margin-top: 100px;
+    .aroundimage-cols >div{
+        opacity: 0;
+    }
+}
+
+.steps__container{
+    opacity: 0;
+    margin-top: 100px;
+}
+
+.ourteam__container .ourteam-cols div{
+    opacity: 0;
+    margin-top: 100px;
+    &:nth-child(3){
+        margin-top: 200px;
+    }
+    &:nth-child(4){
+        margin-top: 300px;
+    }
+    &:nth-child(5){
+        margin-top: 400px;
+    }
+}
