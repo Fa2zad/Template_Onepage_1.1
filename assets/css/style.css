@@ -1,3 +1,76 @@
+@font-face {
+  font-family: 'vazir';
+  src: url("../fonts/vazir/Vazir.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/vazir/Vazir.eot?#iefix") format("embedded-opentype"), url("../fonts/vazir/Vazir.woff2") format("woff2"), url("../fonts/vazir/Vazir.woff") format("woff"), url("../fonts/vazir/Vazir.ttf") format("truetype"), url("../fonts/vazir/Vazir.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+
+.header__container {
+  top: 70px;
+  position: absolute;
+  width: 100%;
+}
+
+.header__container nav {
+  background-color: #ffffff;
+  height: 120px;
+  padding: 25px;
+  border-radius: 0px;
+}
+
+.header__container nav .header-search {
+  float: right;
+  margin-top: 10px;
+}
+
+.header__container nav .header-search form input {
+  width: 0px;
+  padding: 0;
+  border: 0px;
+}
+
+.header__container nav .header-search form i {
+  font-size: 17px;
+}
+
+.header__container nav .header-menu {
+  float: right;
+  margin-top: 10px;
+}
+
+.header__container nav .header-menu ul {
+  padding: 0px;
+}
+
+.header__container nav .header-menu ul li {
+  float: right;
+}
+
+.header__container nav .header-user {
+  float: right;
+  margin-top: 10px;
+}
+
+.header__container nav .header-user ul {
+  padding: 0px;
+}
+
+.header__container nav .header-user ul li {
+  float: right;
+}
+
+.header__container nav .header-user i {
+  font-size: 16px;
+}
+
+.header__container nav .header-separator {
+  height: 20px;
+  border-left: 1px solid #5e5e5e;
+  float: right;
+  margin: 25px 10px;
+}
+
 body {
   color: #5e5e5e;
   font-size: 14px;
@@ -5,31 +78,31 @@ body {
   direction: rtl;
 }
 
-body {
-  border: 3px solid black;
+body a {
+  color: #5e5e5e;
 }
 
-body header, body main, body footer {
-  border: 2px dashed blue;
+body a.active, body a:active, body a:hover, body a:focus {
+  color: #ed484b;
+  text-decoration: none;
 }
 
-section, article, aside, div {
-  border: 1px dotted #0075c4;
+body input.form-control {
+  border-radius: 2px;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
-section > section, section > div, article > section, article > div, aside > section, aside > div, div > section, div > div {
-  border: 1px solid #13a000;
+body input.form-control:focus {
+  border: 1px solid #ed484b;
+  -webkit-box-shadow: 0px 2px 10px 0px gray;
+          box-shadow: 0px 2px 10px 0px gray;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
-section > section > section, section > section > div, section > div > section, section > div > div, article > section > section, article > section > div, article > div > section, article > div > div, aside > section > section, aside > section > div, aside > div > section, aside > div > div, div > section > section, div > section > div, div > div > section, div > div > div {
-  border: 1px dashed red;
-}
-
-h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span, img {
-  border: 1px dotted #ff4800;
-}
-
-h1 > h1, h1 > h2, h1 > h3, h1 > h4, h1 > h5, h1 > h6, h1 > p, h1 > ul, h1 > ol, h1 > li, h1 > a, h1 > span, h1 > img, h1 > small, h2 > h1, h2 > h2, h2 > h3, h2 > h4, h2 > h5, h2 > h6, h2 > p, h2 > ul, h2 > ol, h2 > li, h2 > a, h2 > span, h2 > img, h2 > small, h3 > h1, h3 > h2, h3 > h3, h3 > h4, h3 > h5, h3 > h6, h3 > p, h3 > ul, h3 > ol, h3 > li, h3 > a, h3 > span, h3 > img, h3 > small, h4 > h1, h4 > h2, h4 > h3, h4 > h4, h4 > h5, h4 > h6, h4 > p, h4 > ul, h4 > ol, h4 > li, h4 > a, h4 > span, h4 > img, h4 > small, h5 > h1, h5 > h2, h5 > h3, h5 > h4, h5 > h5, h5 > h6, h5 > p, h5 > ul, h5 > ol, h5 > li, h5 > a, h5 > span, h5 > img, h5 > small, h6 > h1, h6 > h2, h6 > h3, h6 > h4, h6 > h5, h6 > h6, h6 > p, h6 > ul, h6 > ol, h6 > li, h6 > a, h6 > span, h6 > img, h6 > small, p > h1, p > h2, p > h3, p > h4, p > h5, p > h6, p > p, p > ul, p > ol, p > li, p > a, p > span, p > img, p > small, ul > h1, ul > h2, ul > h3, ul > h4, ul > h5, ul > h6, ul > p, ul > ul, ul > ol, ul > li, ul > a, ul > span, ul > img, ul > small, ol > h1, ol > h2, ol > h3, ol > h4, ol > h5, ol > h6, ol > p, ol > ul, ol > ol, ol > li, ol > a, ol > span, ol > img, ol > small, li > h1, li > h2, li > h3, li > h4, li > h5, li > h6, li > p, li > ul, li > ol, li > li, li > a, li > span, li > img, li > small, a > h1, a > h2, a > h3, a > h4, a > h5, a > h6, a > p, a > ul, a > ol, a > li, a > a, a > span, a > img, a > small, span > h1, span > h2, span > h3, span > h4, span > h5, span > h6, span > p, span > ul, span > ol, span > li, span > a, span > span, span > img, span > small, img > h1, img > h2, img > h3, img > h4, img > h5, img > h6, img > p, img > ul, img > ol, img > li, img > a, img > span, img > img, img > small {
-  border: 1px solid #ffc400;
+.slider__container {
+  height: 800px;
+  background-color: #ed484b;
 }
 /*# sourceMappingURL=style.css.map */

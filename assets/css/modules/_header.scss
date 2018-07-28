@@ -1,0 +1,58 @@
+//-----------------------------------//
+//               Header              //
+//        called by style.scss       //
+//-----------------------------------//
+.header__container {
+    top: 70px;
+    position: absolute;
+    width: 100%;
+    nav {
+        background-color: #ffffff;
+        height: 120px;
+        padding: 25px;
+        border-radius: 0px;
+        .header-search {
+            float: right;
+            margin-top: 10px;
+            form{
+                input{
+                    width: 0px;
+                    padding: 0;
+                    border: 0px;
+                }
+                i{
+                    font-size: 17px;
+                }
+            }
+        }
+        .header-menu {
+            float: right;
+            margin-top: 10px;
+            ul {
+                padding: 0px;
+                li {
+                    float: right;
+                }
+            }
+        }
+        .header-user {
+            float: right;
+            margin-top: 10px;
+            ul {
+                padding: 0px;
+                li {
+                    float: right;
+                }
+            }
+            i{
+                font-size: 16px;
+            }
+        }
+        .header-separator {
+            height: 20px; 
+            border-left: 1px solid $regularFontColor;
+            float: right; 
+            margin: 25px 10px;
+        }
+    }
+}

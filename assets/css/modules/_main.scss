@@ -2,9 +2,35 @@
 //               Main                //
 //        called by style.scss       //
 //-----------------------------------//
-body{
+body {
     color: $regularFontColor;
     font-size: $regularFontSize;
     font-family: $regularFont;
     direction: rtl;
+    a {
+        color: $regularFontColor;
+        &.active,
+        &:active,
+        &:hover,
+        &:focus {
+            color: $linkColor;
+            text-decoration: none;
+        }
+    }
+    input.form-control {
+        //bootstrap class
+        border-radius: 2px;
+        transition-duration: 500ms;
+        &:focus {
+            border: 1px solid $themeColor;
+            box-shadow: 0px 2px 10px 0px gray;
+            transition-duration: 500ms;
+        }
+    }
 }
+
+//==============Modules==============//
+//-----------------------------------//
+//               slider              //
+//-----------------------------------//
+@import "main_modules/slider"

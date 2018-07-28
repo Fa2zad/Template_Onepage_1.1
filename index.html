@@ -16,59 +16,88 @@
 
     <header class="header__container">
         <div class="container">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-
-                    <!-- BRAND -->
+            <nav class="navbar">
+                <!-- LOGO -->
+                <div class="header-logo">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainMenu" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Your Brand</a>
+                        <a href="#">
+                            <img src="assets/images/logo.png" alt="Brand name">
+                        </a>
                     </div>
+                </div>
 
-                    <!-- COLLAPSIBLE NAVBAR -->
-                    <div class="collapse navbar-collapse" id="alignment-example">
+                <!-- COLLAPSIBLE NAVBAR -->
+                <div class="collapse navbar-collapse header-collapse" id="mainMenu">
 
-                        <!-- Links -->
-                        <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a href="#">Link 1
-                                    <span class="sr-only">(current)</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">Link 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 3</a>
-                            </li>
-                        </ul>
+                    <!-- Search -->
+                    <div class="header-search">
 
-                        <!-- Search (left) -->
-                        <form class="navbar-form navbar-left" role="search">
+                        <form class="navbar-form navbar-right" role="search">
+                            <a href="#">
+                                <i class="fas fa-search"></i>
+                            </a>
                             <div class="form-group">
                                 <input type="text" class="form-control">
                             </div>
-                            <button type="submit" class="btn btn-default">Search</button>
                         </form>
 
-                        <!-- Link (right) -->
-                        <ul class="nav navbar-nav navbar-right">
+                    </div>
+
+                    <!-- User -->
+                    <div class="header-user">
+                        <ul class="nav navbar-nav">
                             <li>
-                                <a href="#">Link 4</a>
+                                <a href="#">
+                                    <i class="fas fa-user"></i>
+                                </a>
                             </li>
                         </ul>
+                    </div>
+
+                    <!-- Links -->
+                    <span role="separator" class="header-separator">
+                    </span>
+
+                    <!-- Links -->
+                    <div class="header-menu">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="#">
+                                    <span>خانه</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>پیش نمایش 24</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>پیش نمایش 26</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">
+                                    <span>پیش نمایش 33</span>
+                                </a>
+                            </li>
+
+                        </ul>
+
 
                     </div>
+
+
 
                 </div>
             </nav>
         </div>
-
 
     </header>
 
