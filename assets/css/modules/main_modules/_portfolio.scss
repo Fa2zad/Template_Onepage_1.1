@@ -23,6 +23,7 @@
     ul{
         list-style-type: none;
         padding: 0px;
+        margin: 0px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -47,8 +48,8 @@
                             outline-offset: -10px;
                         }
                     }
-                }
-            }
-        }
-    }
-}
+                }// a
+            }// figure
+        }// li
+    }// li
+}// .portfolio__container

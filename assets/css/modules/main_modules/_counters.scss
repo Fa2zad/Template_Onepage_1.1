@@ -1,12 +1,15 @@
 //-----------------------------------//
-//              Counter              //
+//             Counters              //
 //       Called by _main.scss        //
 //-----------------------------------//
-.counter__container{
+.counters__container{
     background-color: #222222;
-    .counter-items{
+    
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
         >div{
-            float: right;
             text-align: center;
             padding: 95px 0px;
             span{
@@ -23,5 +26,5 @@
                 border-color: white;
             }
         }
-    }
+    
 }

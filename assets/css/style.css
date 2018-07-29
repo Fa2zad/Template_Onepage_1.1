@@ -433,6 +433,7 @@ body .theme-button--big {
 .portfolio__container ul {
   list-style-type: none;
   padding: 0px;
+  margin: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -466,5 +467,39 @@ body .theme-button--big {
           transition-duration: 600ms;
   outline: 1px solid white;
   outline-offset: -10px;
+}
+
+.counters__container {
+  background-color: #222222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.counters__container > div {
+  text-align: center;
+  padding: 95px 0px;
+}
+
+.counters__container > div span {
+  color: white;
+  font-size: 16px;
+}
+
+.counters__container > div span:first-child {
+  color: #ed484b;
+  font-size: 44px;
+}
+
+.counters__container > div hr {
+  border-color: white;
 }
 /*# sourceMappingURL=style.css.map */
