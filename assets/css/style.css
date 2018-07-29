@@ -194,6 +194,7 @@ body .theme-button :focus {
 
 body .theme-button--dark {
   background-color: #333333;
+  color: white;
 }
 
 body .theme-button--dark:visited, body .theme-button--dark :active {
@@ -202,6 +203,7 @@ body .theme-button--dark:visited, body .theme-button--dark :active {
 
 body .theme-button--colored {
   background-color: #ed484b;
+  color: white;
 }
 
 body .theme-button--colored:visited, body .theme-button--colored :active {
@@ -407,5 +409,62 @@ body .theme-button--big {
   border: 20px solid #eeeeee;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.portfolio__container > div:first-child {
+  margin: 80px 10% 0px;
+}
+
+.portfolio__container > div:first-child p {
+  margin: 34px;
+}
+
+.portfolio__container .portfolio-buttons {
+  text-align: center;
+  margin: 40px 0px;
+}
+
+.portfolio__container .portfolio-buttons a {
+  border-radius: 0px;
+  margin: 3px;
+  padding: 1px 32px;
+}
+
+.portfolio__container ul {
+  list-style-type: none;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.portfolio__container ul li {
+  overflow: hidden;
+  width: 25%;
+}
+
+.portfolio__container ul li figure a img {
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  width: 100%;
+  outline-offset: 0px;
+  outline: 10px solid #ed484b;
+}
+
+.portfolio__container ul li figure a img:hover {
+  -webkit-filter: grayscale(1) contrast(200%);
+          filter: grayscale(1) contrast(200%);
+  -webkit-transition-duration: 600ms;
+          transition-duration: 600ms;
+  outline: 1px solid white;
+  outline-offset: -10px;
 }
 /*# sourceMappingURL=style.css.map */

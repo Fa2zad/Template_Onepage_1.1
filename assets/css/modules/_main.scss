@@ -87,6 +87,7 @@ body {
         // theme-button--dark
         &--dark {
             background-color: #333333;
+            color: white;
             &:visited, :active{
                 color: white;
             }
@@ -94,6 +95,7 @@ body {
         // theme-button--colered
         &--colored {
             background-color: $buttonColor;
+            color: white;
             &:visited, :active{
                 color: white;
             }
@@ -119,3 +121,7 @@ body {
 //           imageContent             //
 //-----------------------------------//
 @import "main_modules/imageContents";
+//-----------------------------------//
+//             portfolio             //
+//-----------------------------------//
+@import "main_modules/portfolio";

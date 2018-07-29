@@ -1,0 +1,54 @@
+//-----------------------------------//
+//            portfolio              //
+//       Called by _main.scss        //
+//-----------------------------------//
+.portfolio__container{
+    >div:first-child{
+        margin: 80px 10% 0px;
+        p{
+            margin: 34px;
+        }
+    }
+
+    .portfolio-buttons{
+        text-align: center;
+        margin: 40px 0px;
+        a{
+            border-radius: 0px;
+            margin: 3px;
+            padding: 1px 32px;
+        }
+    }
+
+    ul{
+        list-style-type: none;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+
+        li{
+            overflow: hidden;
+            width: 25%;
+
+            figure{
+                a{
+                    img{
+                        transition-duration: 400ms;
+                        width: 100%;
+                        outline-offset: 0px;
+                        outline: 10px solid $themeColor;
+
+                        &:hover{
+                            filter: grayscale(1) contrast(200%);
+                            transition-duration: 600ms;
+                            outline:  1px solid white;
+                            outline-offset: -10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
