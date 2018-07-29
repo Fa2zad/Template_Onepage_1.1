@@ -78,8 +78,11 @@ body {
             }
         }
         &--dark {
-            color: white;
             background-color: #333333;
+            &:visited, :active{
+                color: white;
+            }
+            
         }
     }
 }

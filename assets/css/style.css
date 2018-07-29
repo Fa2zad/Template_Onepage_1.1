@@ -176,8 +176,11 @@ body .theme-button :focus {
 }
 
 body .theme-button--dark {
-  color: white;
   background-color: #333333;
+}
+
+body .theme-button--dark:visited, body .theme-button--dark :active {
+  color: white;
 }
 
 .slider__container {
