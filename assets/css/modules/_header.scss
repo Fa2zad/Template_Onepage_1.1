@@ -12,6 +12,17 @@
         height: 120px;
         padding: 25px;
         border-radius: 0px;
+        a {
+            color: $regularFontColor;
+            &.active,
+            &:active,
+            &:hover,
+            &:focus {
+                color: $linkColor;
+                text-decoration: none;
+                text-shadow: unset;
+            }
+        }
         .header-search {
             float: right;
             margin-top: 10px;

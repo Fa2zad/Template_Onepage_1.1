@@ -9,13 +9,14 @@ body {
     direction: rtl;
     text-align: right;
     a {
-        color: $regularFontColor;
+        color: $linkColor;
         &.active,
         &:active,
         &:hover,
         &:focus {
-            color: $linkColor;
+            color: darken($color: $linkColor, $amount: 20%);
             text-decoration: none;
+            text-shadow: 0px 0px 10px $linkColor;
         }
     }
     input.form-control {
@@ -50,7 +51,11 @@ body {
         width: 40px;
         margin-top: 15px;
         margin-bottom: 20px;
-    } // theme-button
+    } 
+    p{
+        line-height: 24px;
+    }
+    // theme-button
     .theme-button {
         padding: 20px 0;
         color: $regularFontColor;
@@ -82,7 +87,6 @@ body {
             &:visited, :active{
                 color: white;
             }
-            
         }
     }
 }
@@ -92,4 +96,8 @@ body {
 //-----------------------------------//
 //               slider              //
 //-----------------------------------//
-@import "main_modules/slider"
+@import "main_modules/slider";
+//-----------------------------------//
+//           iconContent             //
+//-----------------------------------//
+@import "main_modules/iconContents";
