@@ -1,0 +1,40 @@
+//-----------------------------------//
+//          coloredContents          //
+//       Called by _main.scss        //
+//-----------------------------------//
+.colored-contents__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    color: white;
+    hr{
+        border-top-color: white;
+        margin-right: 0px;
+    }
+    h4{
+        color: white;
+        small{
+            color: white;
+        }
+    }
+    a{
+        padding: 4px 30px;
+    }
+    >div{
+        width: calc(100% / 3);
+        padding: 80px 68px 45px;
+
+        &:nth-child(1){
+            background-color: transparentize($color: $themeColor, $amount: 0.1);
+            filter: hue-rotate(10deg) brightness(1.2);
+        }
+        &:nth-child(2){
+            background-color: $themeColor;
+        }
+        &:nth-child(3){
+            background-color: transparentize($color: $themeColor, $amount: 0.1);
+            filter: hue-rotate(-4deg) brightness(1.2);
+        }
+    }
+}

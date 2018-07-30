@@ -210,6 +210,17 @@ body .theme-button--colored:visited, body .theme-button--colored :active {
   color: white;
 }
 
+body .theme-button--transparent {
+  background-color: unset;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+body .theme-button--transparent:visited, body .theme-button--transparent :active {
+  color: white;
+}
+
 body .theme-button--big {
   padding: 6px 28px;
 }
@@ -648,5 +659,60 @@ body .theme-button--big {
 .features__container > div:nth-child(3) a {
   padding: 6px 54px;
   margin: 0 12px;
+}
+
+.colored-contents__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  color: white;
+}
+
+.colored-contents__container hr {
+  border-top-color: white;
+  margin-right: 0px;
+}
+
+.colored-contents__container h4 {
+  color: white;
+}
+
+.colored-contents__container h4 small {
+  color: white;
+}
+
+.colored-contents__container a {
+  padding: 4px 30px;
+}
+
+.colored-contents__container > div {
+  width: calc(100% / 3);
+  padding: 80px 68px 45px;
+}
+
+.colored-contents__container > div:nth-child(1) {
+  background-color: rgba(237, 72, 75, 0.9);
+  -webkit-filter: hue-rotate(10deg) brightness(1.2);
+          filter: hue-rotate(10deg) brightness(1.2);
+}
+
+.colored-contents__container > div:nth-child(2) {
+  background-color: #ed484b;
+}
+
+.colored-contents__container > div:nth-child(3) {
+  background-color: rgba(237, 72, 75, 0.9);
+  -webkit-filter: hue-rotate(-4deg) brightness(1.2);
+          filter: hue-rotate(-4deg) brightness(1.2);
 }
 /*# sourceMappingURL=style.css.map */
