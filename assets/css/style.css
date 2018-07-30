@@ -560,4 +560,93 @@ body .theme-button--big {
   font-size: 16px;
   margin-left: 10px;
 }
+
+.features__container {
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 90px 50px 65px;
+}
+
+.features__container h4 i {
+  border-radius: 50%;
+  color: white;
+  background: #ed484b;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 15px;
+}
+
+.features__container > div {
+  margin-bottom: 30px;
+}
+
+.features__container > div:nth-child(1) {
+  padding: 0px 6%;
+}
+
+.features__container > div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.features__container > div:nth-child(2) > div:nth-child(1) {
+  width: 22%;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features__container > div:nth-child(2) > div:nth-child(1) > div {
+  padding: 15px 0px;
+}
+
+.features__container > div:nth-child(2) > div:nth-child(3) {
+  width: 22%;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features__container > div:nth-child(2) > div:nth-child(3) > div {
+  padding: 15px 0px;
+}
+
+.features__container > div:nth-child(3) a {
+  padding: 6px 54px;
+  margin: 0 12px;
+}
 /*# sourceMappingURL=style.css.map */
