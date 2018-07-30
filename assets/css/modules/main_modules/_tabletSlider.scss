@@ -1,0 +1,52 @@
+//-----------------------------------//
+//           tabletSlider            //
+//       Called by _main.scss        //
+//-----------------------------------//
+.tablet-slider__container{
+    .tablet-slider-columns{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-top: 90px;
+        padding-bottom: 115px;
+        >div{
+            width: 50%;
+            position: relative;
+            >img{
+                position: absolute;
+                top: 0;
+                left: 22%;
+            }
+
+            >div{
+                text-align: center;
+                width: 286px;
+                height: 374px;
+                overflow: hidden;
+                margin: 0 auto;
+                margin-top: 47px;
+                margin-left: 161px;
+            }
+
+            &:last-child{
+                padding-right: 10px;
+                hr{
+                    margin-right: 0px;
+                }
+                ul{
+                    list-style-type: none;
+                    padding: 0px;
+                    line-height: 35px;
+                    li{
+                        i{
+                            color: $themeColor;
+                            font-size: 16px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
