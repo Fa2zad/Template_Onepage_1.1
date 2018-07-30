@@ -756,4 +756,31 @@ body .theme-button--big {
 .ourteam__container > div:last-child > div figure figcaption hr {
   border-top-color: #bbbbbb;
 }
+
+.parallax__container {
+  background-image: url("../images/piano.jpg");
+  background-attachment: fixed;
+  height: 300px;
+  background-size: 100%;
+  text-align: center;
+  color: #d3d3d3;
+  padding: 50px;
+}
+
+.parallax__container h3 {
+  color: #d3d3d3;
+}
+
+.parallax__container h3 small {
+  color: #d3d3d3;
+}
+
+.parallax__container ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.parallax__container ul li {
+  float: left;
+}
 /*# sourceMappingURL=style.css.map */
