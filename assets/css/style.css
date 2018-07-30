@@ -715,4 +715,45 @@ body .theme-button--big {
   -webkit-filter: hue-rotate(-4deg) brightness(1.2);
           filter: hue-rotate(-4deg) brightness(1.2);
 }
+
+.ourteam__container {
+  text-align: center;
+  padding: 70px 70px 35px;
+}
+
+.ourteam__container > div:first-child p {
+  padding: 1% 9%;
+}
+
+.ourteam__container > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.ourteam__container > div:last-child > div {
+  padding: 20px;
+}
+
+.ourteam__container > div:last-child > div figure img {
+  border: 1px solid #bbbbbb;
+}
+
+.ourteam__container > div:last-child > div figure figcaption {
+  margin-top: 55px;
+}
+
+.ourteam__container > div:last-child > div figure figcaption hr {
+  border-top-color: #bbbbbb;
+}
 /*# sourceMappingURL=style.css.map */

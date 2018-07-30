@@ -1,0 +1,33 @@
+//-----------------------------------//
+//             ourteam               //
+//       Called by _main.scss        //
+//-----------------------------------//
+.ourteam__container{
+    text-align: center;
+    padding: 70px 70px 35px;
+    >div:first-child{
+        p{
+            padding: 1% 9%;
+        }
+    }
+    >div:last-child{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        >div{
+            padding: 20px;
+            figure{
+                img{
+                    border: 1px solid #bbbbbb;
+                }
+                figcaption{
+                    margin-top: 55px;
+                    hr{
+                        border-top-color: #bbbbbb;
+                    }
+                }
+            }
+        }
+    }
+}
