@@ -1,0 +1,117 @@
+//-----------------------------------//
+//              contact              //
+//       Called by _main.scss        //
+//-----------------------------------//
+.contact__container {
+    position: relative;
+    >div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        direction: ltr;
+        >div {
+            width: 50%;
+            direction: rtl;
+            &:nth-child(1) {
+                // map
+                background-color: #e5e3df;
+            }
+            &.contact-info {
+                background-color: #eeeeee;
+                box-shadow: 3px 0px 12px 0px rgba(0, 0, 0, 0.6);
+                padding: 10% 3% 8% 7%;
+                hr {
+                    margin-right: 0px;
+                }
+                .contact-info-columns{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    align-content: flex-start;
+                    >div{
+                        width: 48%;
+                        padding: 20px 0px;
+                    }
+                }
+                h5{
+                    i{
+                        border-radius: 50%;
+                        color: white;
+                        background: $themeColor;
+                        width: 50px;
+                        height: 50px;
+                        text-align: center;
+                        vertical-align: middle;
+                        padding-top: 18px;
+                        float: left;
+                        margin-top: -14px;
+                    }
+                }
+                hr.contact-info-separator{
+                    border-top: 1px dashed #aaaaaa;
+                    width: 100%;
+                    margin: 20px 0px 0px 0px;
+                    display: inline-block;
+                }
+                ul{
+                    list-style-type: none;
+                    padding: 0px;
+                    margin: 30px 0px 0px 0px;
+                    display: inline-block;
+                    li{
+                        float: right;
+                        margin: 3px;
+                        a{
+                            width: 24px;
+                            height: 24px;
+                            display: block;
+                            background: url('../images/social-address.png');
+                            background-size: 203px;
+                            background-repeat: no-repeat;
+                        }
+                        &:nth-child(1) a{
+                            background-position: -180px;
+                        }
+                        &:nth-child(2) a{
+                            background-position: -150px;
+                        }
+                        &:nth-child(3) a{
+                            background-position: -120px;
+                        }
+                        &:nth-child(4) a{
+                            background-position: -90px;
+                        }
+                        &:nth-child(5) a{
+                            background-position: -60px;
+                        }
+                        &:nth-child(6) a{
+                            background-position: -30px;
+                        }
+                    }// li
+                } // ul
+            }// .contact-info
+        }// >div
+    }// >div
+    .contact-triangleshadow {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 25%;
+        left: 49.3%;
+        border: 10px solid #eeeeee;
+        transform: rotate(45deg);
+        box-shadow: -1px 1px 15px -3px rgba(0, 0, 0, 0.6);
+    }
+    .contact-triangle {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 23.5%;
+        left: 49.5%;
+        border: 20px solid #eeeeee;
+        transform: rotate(45deg);
+    }
+}
