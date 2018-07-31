@@ -31,6 +31,7 @@
                 top: 27%;
                 width: 80%;
                 right: 10%;
+                padding: 0px 7%;
                 img{
                     float: right;
                 }
@@ -49,8 +50,8 @@
                     a.theme-button{
                         font-size: 12px;
                     }
-                }
-            }
-        }
-    }
-}
+                }// figcaption
+            }// figure
+        }// li
+    }// ul
+}// .slider__container
