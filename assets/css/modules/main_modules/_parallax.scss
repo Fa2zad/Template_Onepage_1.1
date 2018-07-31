@@ -5,23 +5,43 @@
 .parallax__container{
     background-image: url('../images/piano.jpg');
     background-attachment: fixed;
-    height: 300px;
+    height: 400px;
     background-size: 100%;
     text-align: center;
-    color: #d3d3d3;
-    padding: 50px;
+    color: #fefefe;
+    padding: 80px;
     h3{
-        color: #d3d3d3;
+        color: #fefefe;
         small{
-            color: #d3d3d3;
+            color: #fefefe;
         }
+    }
+    
+    hr{
+        border-top-color: #fefefe;
+    }
+    p{
+        margin: 3% 9%;
     }
     ul{
         list-style-type: none;
         padding: 0px;
+        display: flex;
+        justify-content: space-around;
+        direction: ltr;
+        align-items: center;
+
         li{
-            float: left;
-        }
-    }
-    
-}
+            width: calc(100% / 7);
+            &.parallax-icon{
+                a{
+                    font-size: 32px;
+                    color: #fefefe;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }// li
+    }// ul
+}// .parallax__container
