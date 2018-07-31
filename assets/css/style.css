@@ -802,7 +802,7 @@ body .theme-button--big {
 }
 
 .parallax__container ul li.parallax-icon a {
-  font-size: 32px;
+  font-size: 25px;
   color: #fefefe;
 }
 
@@ -959,5 +959,182 @@ body .theme-button--big {
   border: 20px solid #eeeeee;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.footer__container {
+  background-color: #262626;
+  color: #a7a7a7;
+}
+
+.footer__container > section:first-child .footer-modules {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer__container > section:first-child .footer-modules > div {
+  width: 33%;
+  padding: 30px 0px;
+}
+
+.footer__container > section:first-child .footer-modules > div h3 {
+  color: #ed484b;
+}
+
+.footer__container > section:first-child .footer-modules > div hr {
+  margin-right: 0px;
+  border-top-color: #aaaaaa;
+  border-top-width: 3px;
+}
+
+.footer__container > section:first-child .footer-modules > div.footer-modules-about p {
+  margin: 15px 0px;
+}
+
+.footer__container > section:first-child .footer-modules > div.footer-modules-about figure {
+  margin: 30px 0px;
+}
+
+.footer__container > section:first-child .footer-modules > div.footer-modules-about figure figcaption a i {
+  font-size: 8px;
+  border-radius: 50%;
+  color: #fefefe;
+  background: #ed484b;
+  width: 17px;
+  height: 17px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 4px;
+}
+
+.footer__container > section:first-child .footer-modules > div.footer-modules-news ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.footer__container > section:first-child .footer-modules > div.footer-modules-news ul li {
+  margin: 10px;
+  padding: 7px 0px 45px;
+  border-bottom: 1px solid #515151;
+}
+
+.footer__container > section:first-child .footer-modules > div.footer-modules-news ul li div {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.footer__container > section:first-child .footer-modules > div.footer-modules-news ul li div:first-child span {
+  display: block;
+  width: 50px;
+  text-align: center;
+}
+
+.footer__container > section:first-child .footer-modules > div.footer-modules-news ul li div:first-child span:first-child {
+  color: #ed484b;
+  background-color: #fefefe;
+  font-size: 24px;
+  padding: 3px;
+}
+
+.footer__container > section:first-child .footer-modules > div.footer-modules-news ul li div:first-child span:last-child {
+  color: #fefefe;
+  background-color: #ed484b;
+  font-size: 16px;
+  padding: 1px;
+}
+
+.footer__container > section:first-child .footer-modules > div.footer-modules-news ul li div:last-child {
+  margin-top: 5px;
+  vertical-align: super;
+}
+
+.footer__container > section:first-child .footer-modules > div.footer-modules-news ul li div:last-child h5 {
+  color: #a7a7a7;
+}
+
+.footer__container > section:first-child .footer-modules > div.footer-modules-news ul li div:last-child span {
+  color: #5e5e5e;
+  display: block;
+}
+
+.footer__container > section:last-child {
+  background-color: #202020;
+}
+
+.footer__container > section:last-child .footer-copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 34px 0px 19px;
+}
+
+.footer__container > section:last-child .footer-copyright > div {
+  width: 50%;
+}
+
+.footer__container > section:last-child .footer-copyright > div:first-child a {
+  color: #a7a7a7;
+}
+
+.footer__container > section:last-child .footer-copyright > div:first-child a:hover {
+  color: #ed484b;
+}
+
+.footer__container > section:last-child .footer-copyright > div:last-child nav {
+  display: inline-block;
+  float: left;
+}
+
+.footer__container > section:last-child .footer-copyright > div:last-child nav ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.footer__container > section:last-child .footer-copyright > div:last-child nav ul li {
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__container > section:last-child .footer-copyright > div:last-child nav ul li a {
+  width: 15px;
+  height: 15px;
+  background-image: url("../images/foorer-social.png");
+  background-repeat: no-repeat;
+}
+
+.footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(2) a {
+  background-position: -15px;
+}
+
+.footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(3) a {
+  background-position: -30px;
+}
+
+.footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(4) a {
+  background-position: -45px;
+}
+
+.footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(5) a {
+  background-position: -60px;
+}
+
+.footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(6) a {
+  background-position: -75px;
+}
+
+.footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(7) a {
+  background-position: -90px;
 }
 /*# sourceMappingURL=style.css.map */
