@@ -1138,4 +1138,48 @@ body .theme-button--big {
 .footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(7) a {
   background-position: -90px;
 }
+
+.icon-contents-columns > div {
+  margin-top: 100px;
+  opacity: 0;
+}
+
+.image-contents__container {
+  opacity: 0;
+}
+
+.image-contents__container ul li figure figcaption h3 {
+  margin-top: -100px;
+}
+
+.image-contents__container ul li figure figcaption p {
+  margin-right: 100px;
+  margin-left: -100px;
+  opacity: 0;
+}
+
+.image-contents__container ul li figure figcaption a {
+  opacity: 0;
+  margin-top: 60px;
+}
+
+.portfolio__container {
+  opacity: 0;
+  margin-top: 100px;
+}
+
+.portfolio__container div:first-child {
+  opacity: 0;
+  margin-top: 200px;
+}
+
+.portfolio__container .portfolio-buttons {
+  opacity: 0;
+  margin-top: -100px;
+}
+
+.counters__container > div {
+  opacity: 0;
+  margin-top: 50px;
+}
 /*# sourceMappingURL=style.css.map */
