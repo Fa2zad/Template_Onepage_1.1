@@ -17,7 +17,6 @@ $(window).resize(function () {
 
 });
 
-
 //------------------------------------//
 //---------- window scroll -----------//
 //------------------------------------//
@@ -71,5 +70,8 @@ $(window).scroll(function () {
 
     //========== counter ==========//
     Counter.counter('.counters__container span[data-count]', 7000, 0);
+
+    //========== parallax ==========//
+    Parallax.init('.parallax__container');
 
 });
