@@ -1182,4 +1182,63 @@ body .theme-button--big {
   opacity: 0;
   margin-top: 50px;
 }
+
+.tablet-slider__container {
+  opacity: 0;
+  margin-right: -100px;
+}
+
+.tablet-slider__container ul li {
+  padding-top: 50px;
+}
+
+.features__container {
+  opacity: 0;
+  margin-top: -100px;
+}
+
+.features__container > div > div {
+  margin-top: 100px;
+}
+
+.features__container > div:last-child a {
+  padding: 0px;
+  margin: 0px;
+  opacity: 0;
+}
+
+.colored-contents__container > div {
+  padding: 0px 68px 0px;
+  opacity: 0;
+}
+
+.ourteam__container {
+  opacity: 0;
+  margin-top: -100px;
+}
+
+.ourteam__container > div:nth-child(2) div:nth-child(1) {
+  margin-top: 200px;
+  opacity: 0;
+}
+
+.ourteam__container > div:nth-child(2) div:nth-child(2) {
+  margin-top: 300px;
+  opacity: 0;
+}
+
+.ourteam__container > div:nth-child(2) div:nth-child(3) {
+  margin-top: 400px;
+  opacity: 0;
+}
+
+.ourteam__container > div:nth-child(2) div:nth-child(4) {
+  margin-top: 500px;
+  opacity: 0;
+}
+
+.contact__container {
+  opacity: 0;
+  margin-top: -100px;
+}
 /*# sourceMappingURL=style.css.map */

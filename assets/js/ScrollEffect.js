@@ -1,13 +1,9 @@
 var ScrollEffect = (function () {
 
-    
   
     /* =================== private methods ================= */
     // setImagesHeight elements
-    
-          
       
-  
     /* =================== public methods ================== */
     // main fadeInOnScroll method
     /** @description Fade in element. For use first change style of element to ( opacity: 0; )  
@@ -35,7 +31,6 @@ var ScrollEffect = (function () {
      * @param {number} distance The top distance of element to be scroll to play aniamation in px.  
      * @param {string} effect Multiple CSS properties, use the following syntax: {"propertyname":"value","propertyname":"value",...}
      * @param {string} easing Easing function. Default value is 'swing'
-     * 
      */  
     function anyEffectOnScroll(selector, duration,  distance, effect, Easing) {
       if (Easing == undefined) {
