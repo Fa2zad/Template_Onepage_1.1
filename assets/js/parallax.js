@@ -72,7 +72,3 @@ var Parallax = (function () {
         init: init,
     };
   }());
-
-
-
-

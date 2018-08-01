@@ -18,7 +18,7 @@ var ScrollEffect = (function () {
           var bottom_of_window = $(window).scrollTop() + $(window).height();
           
           if( bottom_of_window > distance_of_object ){
-              $(this).animate({'opacity':'1'},duration);
+              $(this).animate({'opacity':'1'}, duration);
             }
           
       }); 

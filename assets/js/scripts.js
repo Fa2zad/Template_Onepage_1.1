@@ -3,9 +3,10 @@
 //------------------------------------//
 $(document).ready(function(){
 
-    //====== Menu
+    //============ menu ===========//
     //Menu.init();
-
+    //============ slider ===========//
+    Slider.init('.slider__container');
 
 });
 

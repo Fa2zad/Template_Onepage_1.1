@@ -1,17 +1,31 @@
 //-----------------------------------//
-//              Counter              //
+//              slider              //
 //       Called by _main.scss        //
 //-----------------------------------//
 .slider__container {
     height: 800px;
-    background-color: $themeColor;
+    background-color: white;
+    position: relative;
+    
     .slider-timebar{
         height: 5px;
-        width: 80%;
+        width: 0%;
         background: rgba(#fff, 0.5);
         position: absolute;
         z-index: 1;
     }
+    >ul >li{
+        //opacity: 0;
+        display: none;
+        &.active{
+            //opacity: 1;
+            display: block;
+            >img{
+                height: 800px;
+                width: 100%
+            }
+        }
+    } 
     ul {
         list-style-type: none;
         padding: 0px;
@@ -21,6 +35,7 @@
             overflow: hidden;
             position: relative;
             font-size: 15px;
+            
             i{
                 font-size: 18px;
                 margin-left: 10px;
