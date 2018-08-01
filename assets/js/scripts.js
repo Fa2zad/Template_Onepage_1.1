@@ -22,12 +22,7 @@ $(window).resize(function () {
 //---------- window scroll -----------//
 //------------------------------------//
 $(window).scroll(function () {
-
-
-    //counter
-    //Counter.counter('.counter-items >div >span', 8000, 2750);
-
-
+    //========== scroll effect ==========//
     //====== FadeIn sample
     //ScrollEffect.fadeInOnScroll('img', 1500, 100);
     //====== Custome effect sample
@@ -73,5 +68,8 @@ $(window).scroll(function () {
     
     //.contact__container
     ScrollEffect.anyEffectOnScroll('.contact__container', 1000, 200, {'opacity': '1', 'margin-top': '0px'});
+
+    //========== counter ==========//
+    Counter.counter('.counters__container span[data-count]', 7000, 0);
 
 });
