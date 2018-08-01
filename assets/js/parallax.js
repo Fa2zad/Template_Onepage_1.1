@@ -2,7 +2,7 @@ var Parallax = (function () {
 
     var lastScrollTop = 0;
     var speed = 1;
-    var paddingTop = 40;
+    var marginTop = 60;
     /* =================== private methods ================= */
     // isVisible method
     $.fn.isVisible = function() {
@@ -38,13 +38,8 @@ var Parallax = (function () {
 
     function parallaxItems(selector) {
         $(selector).each( function(i){
-        
-            paddingTop = paddingTop - speed;
-              
-                //alert(y);
-              $(this).children().css({'padding-top': paddingTop+"px"});
-            
-          
+            marginTop = marginTop - speed;
+            $(this).children().css({'margin-top': marginTop});
       }); 
     }
 
