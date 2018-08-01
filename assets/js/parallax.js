@@ -35,7 +35,11 @@ var Parallax = (function () {
           
       }); 
     }
-
+    
+    // main parallaxBackground method
+    /** @description parallax inner items effect.  
+     * @param {string} selector The jquery selector with qoutation. 
+     */  
     function parallaxItems(selector) {
         $(selector).each( function(i){
             marginTop = marginTop - speed;
