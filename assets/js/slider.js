@@ -6,7 +6,7 @@ var Slider = (function () {
 
     /* =================== public methods ================== */
     // main slide method
-    /** @description Fade in element. For use first change style of element to ( opacity: 0; )  
+    /** @description slide element. 
      * @param {string} selector The jquery slider container selector with qoutation.
      * @param {number} duration The duration of a slide show in ms.
      * @param {number} animationDuration The duration of animation in ms.
@@ -25,6 +25,7 @@ var Slider = (function () {
                 }
 
                 currentSlide.removeClass("active");
+                $(selector + " >ul >li >figure").css({padding: "0px 0%", opacity: 0.0});
                 nextSlide.css({
                         opacity: 0.4
                     }).addClass("active")
@@ -32,6 +33,7 @@ var Slider = (function () {
                         opacity: 1.0
                     }, animationDuration, function () {
                         bar.animate({'width': 0}, 0, "linear");
+                        $(selector + " >ul >li >figure").animate({padding: "0px 7%", opacity: 1.0}, 1000);
                     });
             }
             bar.animate({'width':$(window).width()}, duration, "linear");
@@ -43,14 +45,8 @@ var Slider = (function () {
 
     }
 
-
-    // main init method
-    function init(selector, duration, animationDuration) {
-        slide(selector , duration, animationDuration);
-    }
-
     /* =============== export public methods =============== */
     return {
-        init: init
+        slide: slide
     };
 }());

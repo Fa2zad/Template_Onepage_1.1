@@ -7,7 +7,7 @@ $(document).ready(function(){
     //Menu.init();
     
     //============ slider ===========//
-    Slider.init('.slider__container', 8000, 2000);
+    Slider.slide('.slider__container', 8000, 1500);
 
 });
 
