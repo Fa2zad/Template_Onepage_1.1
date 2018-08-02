@@ -7,33 +7,37 @@ var Slider = (function () {
     /* =================== public methods ================== */
     // main slide method
     /** @description Fade in element. For use first change style of element to ( opacity: 0; )  
-     * @param {string} selector The jquery selector with qoutation.
+     * @param {string} selector The jquery slider container selector with qoutation.
+     * @param {number} duration The duration of a slide show in ms.
+     * @param {number} animationDuration The duration of animation in ms.
      */
-    function slide(selector) {
+    function slide(selector, duration, animationDuration) {
         $(selector).each(function (i) {
-
-            var animateInterval;
+            var bar = $(".slider-timebar");
             function slideImagesForward() {
-                $(".slider-timebar").animate({'width':$(window).width()}, 8000, "linear");
+                bar.animate({'width':$(window).width()}, duration, "linear");
 
-                var oCurrentPhoto = $(selector + " >ul >li.active");
-                var oNextPhoto = oCurrentPhoto.next();
+                var currentSlide = $(selector + " >ul >li.active");
+                var nextSlide = currentSlide.next();
 
-                if (oNextPhoto.length == 0) {
-                    oNextPhoto = $(selector + " >ul >li:first");
+                if (nextSlide.length == 0) {
+                    nextSlide = $(selector + " >ul >li:first");
                 }
 
-                oCurrentPhoto.removeClass("active");
-                oNextPhoto.css({
-                        opacity: 0.5
+                currentSlide.removeClass("active");
+                nextSlide.css({
+                        opacity: 0.4
                     }).addClass("active")
                     .animate({
                         opacity: 1.0
-                    }, 1000, function () {
-                    $(".slider-timebar").animate({'width': 0}, 0, "linear");
+                    }, animationDuration, function () {
+                        bar.animate({'width': 0}, 0, "linear");
                     });
             }
-            animateInterval = setInterval(slideImagesForward, 8000);
+            bar.animate({'width':$(window).width()}, duration, "linear");
+            bar.animate({'width': 0}, 0, "linear");
+
+            animateInterval = setInterval(slideImagesForward, duration, animationDuration);
 
         });
 
@@ -41,8 +45,8 @@ var Slider = (function () {
 
 
     // main init method
-    function init(selector) {
-        slide(selector);
+    function init(selector, duration, animationDuration) {
+        slide(selector , duration, animationDuration);
     }
 
     /* =============== export public methods =============== */

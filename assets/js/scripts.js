@@ -5,8 +5,9 @@ $(document).ready(function(){
 
     //============ menu ===========//
     //Menu.init();
+    
     //============ slider ===========//
-    Slider.init('.slider__container');
+    Slider.init('.slider__container', 8000, 2000);
 
 });
 
