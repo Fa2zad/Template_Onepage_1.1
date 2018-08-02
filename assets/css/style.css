@@ -82,6 +82,10 @@
   margin: 25px 10px;
 }
 
+.header__container nav .icon-bar {
+  background-color: #5e5e5e;
+}
+
 body {
   color: #5e5e5e;
   font-size: 14px;
@@ -171,8 +175,8 @@ body .theme-button:hover,
 body .theme-button :focus {
   -webkit-animation: pulse 0.8s;
           animation: pulse 0.8s;
-  -webkit-box-shadow: 0 0 10px 30px rgba(255, 255, 255, 0);
-          box-shadow: 0 0 10px 30px rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 0 0 10px 15px rgba(255, 255, 255, 0);
+          box-shadow: 0 0 10px 15px rgba(255, 255, 255, 0);
   background-color: #ed484b;
   text-decoration: none;
   color: white;
@@ -280,12 +284,14 @@ body .theme-button--big {
 
 .slider__container ul li figure img {
   float: right;
+  max-width: 55%;
 }
 
 .slider__container ul li figure figcaption {
   float: left;
   margin-top: 50px;
   text-align: left;
+  max-width: 45%;
 }
 
 .slider__container ul li figure figcaption h1, .slider__container ul li figure figcaption h2, .slider__container ul li figure figcaption h3, .slider__container ul li figure figcaption h4, .slider__container ul li figure figcaption h5, .slider__container ul li figure figcaption h6, .slider__container ul li figure figcaption p, .slider__container ul li figure figcaption small, .slider__container ul li figure figcaption li {
@@ -373,10 +379,14 @@ body .theme-button--big {
 }
 
 .image-contents__container ul li {
+  display: none;
+  position: relative;
+}
+
+.image-contents__container ul li.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
 }
 
 .image-contents__container ul li figure {
@@ -748,6 +758,8 @@ body .theme-button--big {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -757,11 +769,13 @@ body .theme-button--big {
 }
 
 .ourteam__container > div:last-child > div {
+  width: calc(25% - 20px);
   padding: 20px;
 }
 
 .ourteam__container > div:last-child > div figure img {
   border: 1px solid #bbbbbb;
+  display: inline;
 }
 
 .ourteam__container > div:last-child > div figure figcaption {
@@ -1151,6 +1165,44 @@ body .theme-button--big {
 
 .footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(7) a {
   background-position: -90px;
+}
+
+@media (max-width: 992px) {
+  .header__container .navbar-nav > li > a {
+    padding: 10px 6px;
+  }
+  .header__container .header-logo {
+    text-align: left;
+  }
+  .header__container .header-logo img {
+    width: 165px;
+  }
+  .ourteam__container > div:last-child > div {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    top: 0px;
+  }
+  .header__container > div {
+    padding: 0px;
+  }
+  .header__container nav {
+    height: unset;
+    padding: 10px;
+  }
+  .icon-contents__container .icon-contents-columns {
+    display: block;
+  }
+  .icon-contents__container .icon-contents-columns > div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .ourteam__container > div:last-child > div {
+    width: calc(100% - 20px);
+  }
 }
 
 .icon-contents-columns > div {

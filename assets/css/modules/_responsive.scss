@@ -1,0 +1,60 @@
+//======================(max-width: 992px)
+@media (max-width: 992px){
+    //header
+    .header__container{
+        .navbar-nav>li>a{
+            padding: 10px 6px;
+        }
+        .header-logo{
+            text-align: left;
+            img{
+                width: 165px;
+            }
+        }
+    }
+
+    //ourteam
+    .ourteam__container{
+        >div:last-child{
+            >div{
+                width: calc(50% - 20px);
+            }
+        }
+    }
+}
+//======================(max-width: 768px)
+@media (max-width: 768px){
+    // header
+    .header__container{
+        top: 0px;
+        >div{
+            padding: 0px;
+        }
+        nav{
+            height: unset;
+            padding: 10px;
+        }
+    }
+
+    // icon-contents
+    .icon-contents__container{
+        .icon-contents-columns{
+            display: block;
+            >div{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    //ourteam
+    .ourteam__container{
+        >div:last-child{
+            >div{
+                width: calc(100% - 20px);
+            }
+        }
+    }
+
+
+}

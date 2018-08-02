@@ -31,7 +31,7 @@ var Counter = (function () {
           {
 
             duration: duration,
-            easing: 'easeInOutQuint',
+            easing: 'easeInOutCubic',
             step: function () {
               $this.text(Math.floor(this.countNum));
             },

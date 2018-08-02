@@ -15,7 +15,6 @@
         z-index: 1;
     }
     >ul >li{
-        //opacity: 0;
         display: none;
         &.active{
             //opacity: 1;
@@ -49,11 +48,14 @@
                 padding: 0px 7%;
                 img{
                     float: right;
+                    max-width: 55%;
                 }
                 figcaption{
                     float: left;
                     margin-top: 50px;
                     text-align: left;
+                    max-width: 45%;
+
                     h1, h2, h3, h4, h5, h6, p, small, li{
                         color: white;
                     }

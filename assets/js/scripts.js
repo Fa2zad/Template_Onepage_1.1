@@ -7,7 +7,10 @@ $(document).ready(function(){
     //Menu.init();
     
     //============ slider ===========//
-    Slider.slide('.slider__container', 8000, 1500);
+    Slider.slide('.slider__container', 8000, 1000);
+
+    //============ image-contents ===========//
+    ImageContents.imageContentsSlide('.image-contents__container', 5000, 1000);
 
 });
 
