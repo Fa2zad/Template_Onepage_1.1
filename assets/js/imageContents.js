@@ -16,20 +16,33 @@ var ImageContents = (function () {
             function slideImagesForward() {
 
                 var currentSlide = $(selector + " >ul >li.active");
+                var currentFigure = $(currentSlide.children(" figure"));
                 var nextSlide = currentSlide.next();
+                var nextFigure = $(nextSlide.children(" figure"));
+                
+                var p = $(selector + " figure >figcaption p");
+                $(p).animate({opacity: 0.0, marginRight: '-20px'}, animationDuration);
+
 
                 if (nextSlide.length == 0) {
                     nextSlide = $(selector + " >ul >li:first");
+                    nextFigure = $(nextSlide.children(" figure"));
                 }
-                currentSlide.animate({opacity: 0.1}, animationDuration/2, function(){
+                currentFigure.animate({opacity: 0.1}, animationDuration/2, function(){
+
                     currentSlide.removeClass("active");
-                    nextSlide.css({
-                            opacity: 0.1
-                        }).addClass("active")
-                        .animate({
+
+                    nextFigure.css({opacity: 0.1});
+
+                    nextSlide.addClass("active");
+
+                    nextFigure.animate({
                             opacity: 1.0
-                        }, animationDuration, function () {
-    
+                        }, animationDuration/2, function () {
+                            $(p).animate({
+                                opacity: 1.0,
+                                marginRight: "0"
+                            }, animationDuration);
                         });
                 });
                 

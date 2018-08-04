@@ -373,6 +373,10 @@ body .theme-button--big {
   border-color: #343434;
 }
 
+.image-contents__container {
+  background-color: #eeeeee;
+}
+
 .image-contents__container ul {
   list-style-type: none;
   padding: 0px;
