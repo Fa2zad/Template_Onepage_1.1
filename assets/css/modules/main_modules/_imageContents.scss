@@ -4,6 +4,9 @@
 //-----------------------------------//
 .image-contents__container{
     background-color: #eeeeee;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: 50% 100%;
     ul{
         list-style-type: none;
         padding: 0px;

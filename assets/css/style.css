@@ -376,6 +376,9 @@ body .theme-button--big {
 
 .image-contents__container {
   background-color: #eeeeee;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: 50% 100%;
 }
 
 .image-contents__container ul {

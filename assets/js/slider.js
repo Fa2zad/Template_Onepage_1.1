@@ -23,7 +23,6 @@ var Slider = (function () {
                 if (nextSlide.length == 0) {
                     nextSlide = $(selector + " >ul >li:first");
                 }
-                //alert( $(currentSlide).children(" img").attr("src"));
                 $(selector).css("background-image", "url("+ $(currentSlide).children(" img").attr("src") +")");
                 currentSlide.animate({opacity: 0.0}, animationDuration/2, function(){
                     currentSlide.removeClass("active");

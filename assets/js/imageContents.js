@@ -28,6 +28,8 @@ var ImageContents = (function () {
                     nextSlide = $(selector + " >ul >li:first");
                     nextFigure = $(nextSlide.children(" figure"));
                 }
+
+                $(selector).css("background-image", "url("+ $(selector + " >ul >li.active >figure >div >img").attr("src") +")");
                 currentFigure.animate({opacity: 0.1}, animationDuration/2, function(){
 
                     currentSlide.removeClass("active");
@@ -38,7 +40,7 @@ var ImageContents = (function () {
 
                     nextFigure.animate({
                             opacity: 1.0
-                        }, animationDuration/2, function () {
+                        }, animationDuration, function () {
                             $(p).animate({
                                 opacity: 1.0,
                                 marginRight: "0"
