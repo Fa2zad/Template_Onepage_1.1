@@ -38,10 +38,10 @@ $(window).scroll(function () {
     ScrollEffect.anyEffectOnScroll('.icon-contents-columns >div:nth-child(3)', 1500, 200, {'opacity': '1', 'margin-top':'0px'});
     
     //.image-contents__container
-    ScrollEffect.fadeInOnScroll('.image-contents__container', 1000, 200);
+    ScrollEffect.fadeInOnScroll('.image-contents__container', 1500, 200);
     ScrollEffect.anyEffectOnScroll('.image-contents__container figcaption h3', 1500, 1470, {'margin-top': '0px'}, 'easeOutQuint');
     ScrollEffect.anyEffectOnScroll('.image-contents__container figcaption p', 2000, 1450, {'opacity': '1', 'margin-left': '0px', 'margin-right': '0px'}, 'easeOutQuint');
-    ScrollEffect.anyEffectOnScroll('.image-contents__container figcaption a', 2000, 1500, {'opacity': '1', 'margin-top': '20px'}, 'easeOutElastic');
+    ScrollEffect.anyEffectOnScroll('.image-contents__container figcaption a', 2000, 1500, {'opacity': '1'}, 'easeOutElastic');
 
     //.portfolio__container
     ScrollEffect.anyEffectOnScroll('.portfolio__container', 1500, 100, {'opacity': '1', 'margin-top':'0px'});
@@ -53,7 +53,7 @@ $(window).scroll(function () {
 
     //.tablet-slider__container
     ScrollEffect.anyEffectOnScroll('.tablet-slider__container', 1500, 200,{'opacity': '1', 'margin-right': '0px'});
-    ScrollEffect.anyEffectOnScroll('.tablet-slider__container ul li', 1500, 3100,{'padding-top': '0px'}, 'easeOutBounce');
+    ScrollEffect.anyEffectOnScroll('.tablet-slider__container ul li', 1500, 3100,{'opacity': '1', 'padding-top': '0px'}, 'easeOutCubic');
 
     //.features__container
     ScrollEffect.anyEffectOnScroll('.features__container', 1500, 200,{'opacity': '1', 'margin-top': '0px'});
@@ -65,10 +65,10 @@ $(window).scroll(function () {
 
     //.ourteam__container
     ScrollEffect.anyEffectOnScroll('.ourteam__container', 1500, 200, {'opacity': '1', 'margin-top': '0px'});
-    ScrollEffect.anyEffectOnScroll('.ourteam__container >div:nth-child(2) div:nth-child(1)', 500, 300, {'opacity': '1', 'margin-top': '0px'});
-    ScrollEffect.anyEffectOnScroll('.ourteam__container >div:nth-child(2) div:nth-child(2)', 1000, 300, {'opacity': '1', 'margin-top': '0px'});
+    ScrollEffect.anyEffectOnScroll('.ourteam__container >div:nth-child(2) div:nth-child(1)', 1500, 300, {'opacity': '1', 'margin-top': '0px'});
+    ScrollEffect.anyEffectOnScroll('.ourteam__container >div:nth-child(2) div:nth-child(2)', 1500, 300, {'opacity': '1', 'margin-top': '0px'});
     ScrollEffect.anyEffectOnScroll('.ourteam__container >div:nth-child(2) div:nth-child(3)', 1500, 300, {'opacity': '1', 'margin-top': '0px'});
-    ScrollEffect.anyEffectOnScroll('.ourteam__container >div:nth-child(2) div:nth-child(4)', 2000, 300, {'opacity': '1', 'margin-top': '0px'});
+    ScrollEffect.anyEffectOnScroll('.ourteam__container >div:nth-child(2) div:nth-child(4)', 1500, 300, {'opacity': '1', 'margin-top': '0px'});
     
     //.contact__container
     ScrollEffect.anyEffectOnScroll('.contact__container', 1000, 200, {'opacity': '1', 'margin-top': '0px'});
