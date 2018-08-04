@@ -233,6 +233,7 @@ body .theme-button--big {
   height: 800px;
   background-color: white;
   position: relative;
+  background-size: 100% 100%;
 }
 
 .slider__container .slider-timebar {

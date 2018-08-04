@@ -1,5 +1,6 @@
 var Slider = (function () {
 
+    var bar = $(".slider-timebar");
 
     /* =================== private methods ================= */
     // setImagesHeight elements
@@ -13,7 +14,6 @@ var Slider = (function () {
      */
     function slide(selector, duration, animationDuration) {
         $(selector).each(function (i) {
-            var bar = $(".slider-timebar");
             function slideImagesForward() {
                 bar.animate({'width':$(window).width()}, duration, "linear");
 
@@ -23,31 +23,51 @@ var Slider = (function () {
                 if (nextSlide.length == 0) {
                     nextSlide = $(selector + " >ul >li:first");
                 }
-                currentSlide.animate({opacity: 0.1}, animationDuration/2, function(){
+                //alert( $(currentSlide).children(" img").attr("src"));
+                $(selector).css("background-image", "url("+ $(currentSlide).children(" img").attr("src") +")");
+                currentSlide.animate({opacity: 0.0}, animationDuration/2, function(){
                     currentSlide.removeClass("active");
                     $(selector + " >ul >li >figure").css({padding: 0, opacity: 0.0});
                     nextSlide.css({
-                            opacity: 0.1
+                            opacity: 0.0
                         }).addClass("active")
                         .animate({
                             opacity: 1.0
-                        }, animationDuration/2, function () {
-                            //bar.animate({'width': 0}, 0, "linear");
-                            bar.animate({'width': 0}, 0, "linear");
+                        }, animationDuration, function () {
+                            
                             $(selector + " >ul >li >figure").animate({padding: "0px 7%", opacity: 1.0}, 1000);
+                            bar.css({width: 0});
+                            bar.animate({'width': 0}, 0, "linear");
                         });
                 });
                 
             }
-            bar.animate({'width':$(window).width()}, duration, "linear");
-            bar.animate({'width': 0}, 0, "linear");
-
+            //bar.animate({'width':$(window).width()}, duration, "linear");
+            //bar.animate({'width': 0}, 0, "linear");
+            timeBar(duration);
             animateInterval = setInterval(slideImagesForward, duration, animationDuration);
 
         });
 
     }
 
+
+
+    function timeBar(duration) {
+        bar.animate({'width': $(window).width()}, duration, "linear");
+        bar.animate({'width': 0}, 0, "linear");
+
+
+        // bar
+        //     .clearQueue()
+        //     .stop()
+        //     .css(
+        //         {width:'0%'}
+        //     )
+        //     .animate({
+        //         width: $(window).width()
+        //     }, duration, "linear");
+    }
     /* =============== export public methods =============== */
     return {
         slide: slide
