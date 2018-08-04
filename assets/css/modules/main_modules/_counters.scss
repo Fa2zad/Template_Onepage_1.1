@@ -6,12 +6,13 @@
     background-color: #222222;
     
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
         >div{
             text-align: center;
             padding: 95px 0px;
+            width: calc(100% / 6);
             span{
                 color: white;
                 font-size: 16px;

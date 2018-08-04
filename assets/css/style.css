@@ -416,6 +416,7 @@ body .theme-button--big {
 
 .image-contents__container ul li figure > div img {
   width: 100%;
+  height: 100%;
 }
 
 .image-contents__container ul li figure figcaption {
@@ -518,8 +519,8 @@ body .theme-button--big {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -531,6 +532,7 @@ body .theme-button--big {
 .counters__container > div {
   text-align: center;
   padding: 95px 0px;
+  width: calc(100% / 6);
 }
 
 .counters__container > div span {
@@ -608,7 +610,7 @@ body .theme-button--big {
 .features__container {
   background-color: #eeeeee;
   text-align: center;
-  padding: 90px 50px 65px;
+  padding: 90px 30px 65px;
 }
 
 .features__container h4 i {
@@ -1011,6 +1013,8 @@ body .theme-button--big {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -1175,6 +1179,15 @@ body .theme-button--big {
   background-position: -90px;
 }
 
+@media (max-width: 1199px) {
+  .tablet-slider__container .tablet-slider-columns > div > img {
+    left: 27%;
+  }
+  .features__container {
+    padding: 90px 10px 65px;
+  }
+}
+
 @media (max-width: 992px) {
   .header__container .navbar-nav > li > a {
     padding: 10px 6px;
@@ -1184,6 +1197,13 @@ body .theme-button--big {
   }
   .header__container .header-logo img {
     width: 165px;
+  }
+  .features__container {
+    padding: 90px 0px 65px;
+  }
+  .features__container div > img {
+    width: 70%;
+    margin: 0 auto;
   }
   .ourteam__container > div:last-child > div {
     width: calc(50% - 20px);
@@ -1205,11 +1225,18 @@ body .theme-button--big {
     display: block;
   }
   .icon-contents__container .icon-contents-columns > div {
-    width: 100%;
-    margin-bottom: 10px;
+    width: calc(100% - 60px);
+    margin: 0px 30px 20px;
+  }
+  .counters__container > div {
+    width: calc(100% / 3);
+    padding: 40px 0px;
   }
   .ourteam__container > div:last-child > div {
     width: calc(100% - 20px);
+  }
+  .footer__container > section:first-child .footer-modules > div {
+    width: 100%;
   }
 }
 
