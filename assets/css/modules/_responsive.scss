@@ -81,11 +81,12 @@
     .slider__container{
         ul li figure
         {
+            top: 10%;
             img{
                 width: 45%;
             }
             figcaption{
-                width: 55%;
+                max-width: 55%;
             }
         }
     } 
@@ -158,5 +159,50 @@
 
 //======================(max-width: 576px)
 @media (max-width: 575.95px) { 
+
+    //.slider
+    .slider__container{
+        height: 600px;
+        ul li, ul li.active{
+            img{
+                height: 600px;
+            }
+            figure
+            {
+                img{
+                    display: none;
+                }
+                figcaption{
+                    max-width: 100%;;
+                }
+            }
+        } 
+    }
+
+    //counters
+    .counters__container{
+        >div{
+            width: 100%;
+            padding: 30px 0px;
+        }
+    }
+
+    //features
+    .features__container{
+        padding: 70px 20px 45px;
+        div:nth-child(2) {
+            >div{
+                &:nth-child(1){
+                    width: 100%;
+                    text-align: center;
+                }
+
+                &:nth-child(3){
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
 
 }
