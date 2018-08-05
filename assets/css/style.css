@@ -499,21 +499,48 @@ body .theme-button--big {
   width: 25%;
 }
 
-.portfolio__container ul li figure a img {
-  -webkit-transition-duration: 400ms;
-          transition-duration: 400ms;
-  width: 100%;
-  outline-offset: 0px;
-  outline: 10px solid #ed484b;
+.portfolio__container ul li figure a {
+  position: relative;
+  display: inline-block;
 }
 
-.portfolio__container ul li figure a img:hover {
-  -webkit-filter: grayscale(1) contrast(200%);
-          filter: grayscale(1) contrast(200%);
+.portfolio__container ul li figure a:hover img {
   -webkit-transition-duration: 600ms;
           transition-duration: 600ms;
-  outline: 1px solid white;
-  outline-offset: -10px;
+  -webkit-filter: grayscale(1) contrast(200%);
+          filter: grayscale(1) contrast(200%);
+}
+
+.portfolio__container ul li figure a img {
+  width: 100%;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.portfolio__container ul li figure a span.portfolio-effect {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0px;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  border: 5px solid #ed484b;
+  opacity: 0;
+}
+
+.portfolio__container ul li figure a span.portfolio-effect:hover {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 2px;
+  -webkit-transition-duration: 600ms;
+          transition-duration: 600ms;
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
 .counters__container {
@@ -1263,6 +1290,9 @@ body .theme-button--big {
   .image-contents__container ul li figure > figcaption {
     width: 100%;
   }
+  .portfolio__container ul li {
+    width: 50%;
+  }
   .counters__container > div {
     width: calc(100% / 3);
     padding: 40px 0px;
@@ -1302,6 +1332,9 @@ body .theme-button--big {
   }
   .slider__container ul li figure figcaption, .slider__container ul li.active figure figcaption {
     max-width: 100%;
+  }
+  .portfolio__container ul li {
+    width: 100%;
   }
   .counters__container > div {
     width: 100%;

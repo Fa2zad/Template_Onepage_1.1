@@ -120,6 +120,13 @@
 
     }
 
+    //.portfolio__container
+    .portfolio__container{
+        ul li{
+            width: 50%;
+        }
+    }
+
     //counters
     .counters__container{
         >div{
@@ -194,6 +201,13 @@
                 }
             }
         } 
+    }
+
+    //.portfolio__container
+    .portfolio__container{
+        ul li{
+            width: 100%;
+        }
     }
 
     //counters

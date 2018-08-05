@@ -70,7 +70,6 @@ var Slider = (function () {
 
     function progressBar(resizing) {
         if (resizing) {
-            //alert(animateInterval);
             clearInterval(animateInterval);
             bar.clearQueue();
             bar.stop().css("width", 0);
@@ -80,7 +79,6 @@ var Slider = (function () {
             nextSlideGlobal.stop();
             figureGlobal.clearQueue();
             figureGlobal.stop();
-            //alert(figureGlobal);
             setTimeout(() => {
                 clearInterval(animateInterval);
                 slide(selectorGlobal, durationGlobal, animationDurationGlobal);
