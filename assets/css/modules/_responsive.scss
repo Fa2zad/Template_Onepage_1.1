@@ -102,6 +102,23 @@
         }
     }
 
+    //.image-contents
+    .image-contents__container{
+        ul li{
+            .contentslider-triangle, .contentslider-triangleshadow{
+                display: none;
+            }
+            figure{
+                >div{
+                    width: 100%;
+                }
+                >figcaption{
+                    width: 100%;
+                }
+            }
+        } 
+
+    }
 
     //counters
     .counters__container{

@@ -406,6 +406,8 @@ body .theme-button--big {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   overflow: hidden;
 }
 
@@ -1251,6 +1253,15 @@ body .theme-button--big {
   .icon-contents__container .icon-contents-columns > div {
     width: calc(100% - 60px);
     margin: 0px 30px 20px;
+  }
+  .image-contents__container ul li .contentslider-triangle, .image-contents__container ul li .contentslider-triangleshadow {
+    display: none;
+  }
+  .image-contents__container ul li figure > div {
+    width: 100%;
+  }
+  .image-contents__container ul li figure > figcaption {
+    width: 100%;
   }
   .counters__container > div {
     width: calc(100% / 3);
