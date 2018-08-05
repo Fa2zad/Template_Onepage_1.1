@@ -19,7 +19,8 @@ $(document).ready(function(){
 //------------------------------------//
 $(window).resize(function () {
 
-
+    //============ slider ===========//
+    Slider.progressBar(true);
 });
 
 //------------------------------------//

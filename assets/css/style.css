@@ -1198,12 +1198,20 @@ body .theme-button--big {
   .header__container .header-logo img {
     width: 165px;
   }
+  .slider__container ul li figure {
+    padding: 0px;
+    width: 90%;
+    right: 3%;
+  }
   .features__container {
     padding: 90px 0px 65px;
   }
   .features__container div > img {
     width: 70%;
     margin: 0 auto;
+  }
+  .tablet-slider__container .tablet-slider-columns > div > img {
+    left: 11%;
   }
   .ourteam__container > div:last-child > div {
     width: calc(50% - 20px);
@@ -1220,6 +1228,12 @@ body .theme-button--big {
   .header__container nav {
     height: unset;
     padding: 10px;
+  }
+  .slider__container ul li figure img {
+    width: 45%;
+  }
+  .slider__container ul li figure figcaption {
+    width: 55%;
   }
   .icon-contents__container .icon-contents-columns {
     display: block;

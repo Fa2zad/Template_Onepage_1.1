@@ -1,7 +1,13 @@
 var Slider = (function () {
 
     var bar = $(".slider-timebar");
-
+    var animateInterval;
+    var selectorGlobal;
+    var durationGlobal;
+    var animationDurationGlobal;
+    var currentSlideGlobal;
+    var nextSlideGlobal;
+    var figureGlobal;
     /* =================== private methods ================= */
     // setImagesHeight elements
 
@@ -14,37 +20,47 @@ var Slider = (function () {
      */
     function slide(selector, duration, animationDuration) {
         $(selector).each(function (i) {
+            selectorGlobal = selector;
+            durationGlobal = duration;
+            animationDurationGlobal = animationDuration;
+
             function slideImagesForward() {
+
+                currentSlideGlobal = $(selector + " >ul >li.active");
+                figureGlobal = $(selector + " >ul >li >figure");
+                nextSlideGlobal = currentSlideGlobal.next();
+                var figurePadding;
+
                 bar.animate({'width':$(window).width()}, duration, "linear");
+                
 
-                var currentSlide = $(selector + " >ul >li.active");
-                var nextSlide = currentSlide.next();
-
-                if (nextSlide.length == 0) {
-                    nextSlide = $(selector + " >ul >li:first");
+                if (nextSlideGlobal.length == 0) {
+                    nextSlideGlobal = $(selector + " >ul >li:first");
                 }
-                $(selector).css("background-image", "url("+ $(currentSlide).children(" img").attr("src") +")");
-                currentSlide.animate({opacity: 0.0}, animationDuration/2, function(){
-                    currentSlide.removeClass("active");
-                    $(selector + " >ul >li >figure").css({padding: 0, opacity: 0.0});
-                    nextSlide.css({
+                $(selector).css("background-image", "url("+ $(currentSlideGlobal).children(" img").attr("src") +")");
+                currentSlideGlobal.animate({opacity: 0.0}, animationDuration/2, function(){
+                    currentSlideGlobal.removeClass("active");
+                    figurePadding = $(figureGlobal).innerWidth() - $(figureGlobal).width();
+                    $(figureGlobal).css({padding: 0, opacity: 0.0});
+                    nextSlideGlobal.css({
                             opacity: 0.0
                         }).addClass("active")
                         .animate({
                             opacity: 1.0
                         }, animationDuration, function () {
                             
-                            $(selector + " >ul >li >figure").animate({padding: "0px 7%", opacity: 1.0}, 1000);
+                            
+                            $(figureGlobal).animate({padding: "0px "+ figurePadding/2 +"%" , opacity: 1.0}, 1000);
                             bar.css({width: 0});
                             bar.animate({'width': 0}, 0, "linear");
                         });
                 });
                 
             }
-            //bar.animate({'width':$(window).width()}, duration, "linear");
-            //bar.animate({'width': 0}, 0, "linear");
-            timeBar(duration);
-            animateInterval = setInterval(slideImagesForward, duration, animationDuration);
+            
+            if (progressBar(false)) {
+                animateInterval = setInterval(slideImagesForward, duration, animationDuration);
+            }
 
         });
 
@@ -52,23 +68,36 @@ var Slider = (function () {
 
 
 
-    function timeBar(duration) {
-        bar.animate({'width': $(window).width()}, duration, "linear");
-        bar.animate({'width': 0}, 0, "linear");
-
-
-        // bar
-        //     .clearQueue()
-        //     .stop()
-        //     .css(
-        //         {width:'0%'}
-        //     )
-        //     .animate({
-        //         width: $(window).width()
-        //     }, duration, "linear");
+    function progressBar(resizing) {
+        if (resizing) {
+            //alert(animateInterval);
+            clearInterval(animateInterval);
+            bar.clearQueue();
+            bar.stop().css("width", 0);
+            currentSlideGlobal.clearQueue();
+            currentSlideGlobal.stop();
+            nextSlideGlobal.clearQueue();
+            nextSlideGlobal.stop();
+            figureGlobal.clearQueue();
+            figureGlobal.stop();
+            //alert(figureGlobal);
+            setTimeout(() => {
+                clearInterval(animateInterval);
+                slide(selectorGlobal, durationGlobal, animationDurationGlobal);
+            }, 200);
+        }else if (!resizing){
+            bar.animate({'width': $(window).width()}, durationGlobal, "linear");
+            bar.animate({'width': 0}, 0, "linear");
+            currentSlideGlobal = $(selectorGlobal + " >ul >li.active");
+            nextSlideGlobal = currentSlideGlobal.next();
+            figureGlobal = $(selectorGlobal + " >ul >li >figure");
+            return true;
+        }
+        
     }
     /* =============== export public methods =============== */
     return {
-        slide: slide
+        slide: slide,
+        progressBar: progressBar
     };
 }());
