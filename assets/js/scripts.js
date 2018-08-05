@@ -12,6 +12,12 @@ $(document).ready(function(){
     //============ image-contents ===========//
     ImageContents.imageContentsSlide('.image-contents__container', 6000, 1000);
 
+    //============== portfolio ==============//
+    $(".portfolio__container .portfolio-buttons a").on("click",function () {
+        Portfolio.init($(this).data("filter"), ".portfolio__container");   
+    });
+
+
 });
 
 ////////////////////////////////////////////////

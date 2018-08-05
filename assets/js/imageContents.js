@@ -23,11 +23,17 @@ var ImageContents = (function () {
             durationGlobal = duration;
             animationDurationGlobal = animationDuration;
 
-            function slideImagesForward() {
-
                 var currentSlide = $(selector + " >ul >li.active");
                 currentFigureGloabl = $(currentSlide.children(" figure"));
                 var nextSlide = currentSlide.next();
+                nextFigureGlobal = $(nextSlide.children(" figure"));
+                pGlobal = $(selector + " figure >figcaption p");
+
+            function slideImagesForward() {
+
+                currentSlide = $(selector + " >ul >li.active");
+                currentFigureGloabl = $(currentSlide.children(" figure"));
+                nextSlide = currentSlide.next();
                 nextFigureGlobal = $(nextSlide.children(" figure"));
                 
                 pGlobal = $(selector + " figure >figcaption p");

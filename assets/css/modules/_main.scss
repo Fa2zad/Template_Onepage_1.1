@@ -66,6 +66,8 @@ body {
         margin-top: 20px;
         display: inline-block;
         line-height: 42px;
+        cursor: pointer;
+        
         &:visited,
         :active {
             color: $regularFontColor;

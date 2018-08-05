@@ -27,13 +27,17 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         align-content: flex-start;
+        background-color: #222222;
+        min-height: 331px;
 
         li{
             overflow: hidden;
             width: 25%;
 
             figure{
+                text-align: center;
                 a{
                     position: relative;
                     display: inline-block;

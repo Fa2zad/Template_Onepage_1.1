@@ -163,6 +163,7 @@ body .theme-button {
   margin-top: 20px;
   display: inline-block;
   line-height: 42px;
+  cursor: pointer;
 }
 
 body .theme-button:visited,
@@ -490,13 +491,22 @@ body .theme-button--big {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+  background-color: #222222;
+  min-height: 331px;
 }
 
 .portfolio__container ul li {
   overflow: hidden;
   width: 25%;
+}
+
+.portfolio__container ul li figure {
+  text-align: center;
 }
 
 .portfolio__container ul li figure a {
