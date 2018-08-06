@@ -14,7 +14,7 @@ $(document).ready(function(){
 
     //============== portfolio ==============//
     $(".portfolio__container .portfolio-buttons a").on("click",function () {
-        Portfolio.init($(this).data("filter"), ".portfolio__container");   
+        Portfolio.init($(this), ".portfolio__container");   
     });
 
 

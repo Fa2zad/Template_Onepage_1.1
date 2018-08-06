@@ -11,36 +11,42 @@ var Portfolio = (function () {
      * @param {number} duration The duration of animation in ms.  
      * @param {number} distance The top distance of element to be scroll to play aniamation in px.  
      */
-    function init(filter, selector) {
+    function init(button, selector) {
+        filter= button.data("filter");
+        $(".portfolio-buttons a").removeClass("theme-button--colored");
+        button.addClass("theme-button--colored");
         if (filter == "all") {
             $(selector + " >ul >li").each(function () {
 
-                $(this).show(1500).animate({
-                    padding: 0,
-                    opacity: 1
-                }, 1500);
-    
-            });
-        } else{
-            $(selector + " >ul >li").each(function () {
-            
                 $(this).animate({
-                    padding: "6% 12% 0",
-                    opacity: 0.5
-                }, 400).hide(1000);
-    
+                    opacity: 0
+                }, 300).hide(100);
+
+                setTimeout(() => {
+                    $(this).show(400).animate({
+                        opacity: 1
+                    }, 400);
+                }, 400);
+
             });
-    
+        } else {
+            $(selector + " >ul >li").each(function () {
+
+                $(this).animate({
+                    opacity: 0
+                }, 300).hide(100);
+
+            });
+
             $(selector + " >ul >li." + filter).each(function () {
-    
-                $(this).show(1000).animate({
-                    padding: 0,
+
+                $(this).show(400).animate({
                     opacity: 1
                 }, 400);
-    
+
             });
         }
-        
+
 
         //alert($(selector + "  >ul >li").hasClass(filter));
         //$(selector + "  >ul >li").animate({opacity: 0, display: "none"}, 500);

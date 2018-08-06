@@ -507,6 +507,7 @@ body .theme-button--big {
 
 .portfolio__container ul li figure {
   text-align: center;
+  overflow: hidden;
 }
 
 .portfolio__container ul li figure a {
