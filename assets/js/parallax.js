@@ -2,7 +2,7 @@ var Parallax = (function () {
 
     var lastScrollTop = 0;
     var speed = 1;
-    var marginTop = 60;
+    var marginTop = 80;
     /* =================== private methods ================= */
     // isVisible method
     $.fn.isVisible = function() {
@@ -36,7 +36,7 @@ var Parallax = (function () {
       }); 
     }
     
-    // main parallaxBackground method
+    // main parallaxItems method
     /** @description parallax inner items effect.  
      * @param {string} selector The jquery selector with qoutation. 
      */  
@@ -52,11 +52,12 @@ var Parallax = (function () {
     
     // main init method
     function init(selector) {
+        var st = $(window).scrollTop();
         if ($(selector).isVisible()) {
-            var st = $(window).scrollTop();
             if (st > lastScrollTop){
                 // downscroll code
                 speed = Math.abs(speed);
+                
             } else {
                 // upscroll code
                 speed = -Math.abs(speed);
@@ -64,6 +65,18 @@ var Parallax = (function () {
             lastScrollTop = st;
 
             parallaxBackground(selector);
+        }
+        else{
+            $(selector).children().css({'margin-top': "unset"});
+
+            if (st > lastScrollTop){
+                // downscroll code
+                marginTop = 80;
+            } else {
+                // upscroll code
+                marginTop = -20;
+            }
+            lastScrollTop = st;
         }
     }
   
