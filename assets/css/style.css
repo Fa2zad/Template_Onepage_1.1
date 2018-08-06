@@ -597,8 +597,8 @@ body .theme-button--big {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1318,6 +1318,21 @@ body .theme-button--big {
     width: calc(100% / 3);
     padding: 40px 0px;
   }
+  .tablet-slider__container .tablet-slider-columns {
+    padding-top: 20px;
+  }
+  .tablet-slider__container .tablet-slider-columns > div {
+    width: 100%;
+  }
+  .tablet-slider__container .tablet-slider-columns > div:first-child {
+    margin-bottom: 80px;
+  }
+  .tablet-slider__container .tablet-slider-columns > div:first-child > div {
+    margin-left: auto;
+  }
+  .tablet-slider__container .tablet-slider-columns > div:first-child > img {
+    left: 24%;
+  }
   .features__container {
     padding: 70px 20px 45px;
   }
@@ -1371,6 +1386,21 @@ body .theme-button--big {
     width: 100%;
     padding: 30px 0px;
   }
+  .tablet-slider__container .tablet-slider-columns {
+    padding-top: 20px;
+  }
+  .tablet-slider__container .tablet-slider-columns > div {
+    width: 100%;
+  }
+  .tablet-slider__container .tablet-slider-columns > div:first-child {
+    margin-bottom: 80px;
+  }
+  .tablet-slider__container .tablet-slider-columns > div:first-child > div {
+    margin-left: 33px;
+  }
+  .tablet-slider__container .tablet-slider-columns > div:first-child > img {
+    left: 0;
+  }
   .features__container {
     padding: 70px 20px 45px;
   }
@@ -1391,6 +1421,25 @@ body .theme-button--big {
   .parallax__container {
     padding: 30px 0px;
     background-size: 100% 100%;
+  }
+}
+
+@media (max-width: 320.95px) {
+  .tablet-slider__container .tablet-slider-columns {
+    padding-top: 20px;
+  }
+  .tablet-slider__container .tablet-slider-columns > div {
+    width: 100%;
+  }
+  .tablet-slider__container .tablet-slider-columns > div:first-child {
+    margin-bottom: 80px;
+  }
+  .tablet-slider__container .tablet-slider-columns > div:first-child > div {
+    width: 75%;
+    margin-top: 39px;
+  }
+  .tablet-slider__container .tablet-slider-columns > div:first-child > img {
+    width: 100%;
   }
 }
 
