@@ -31,7 +31,8 @@ $(document).ready(function(){
 //--------------- window resize --------------//
 ////////////////////////////////////////////////
 $(window).resize(function () {
-
+    //============ menu ===========//
+    //Menu.resize();
     //============ slider ===========//
     Slider.progressBar(true);
 });
