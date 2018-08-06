@@ -23,6 +23,8 @@ $(document).ready(function(){
     $(".portfolio__container .portfolio-buttons a").on("click",function () {
         Portfolio.init($(this), ".portfolio__container");   
     });
+    //============ tablet ===========//
+    TabletSlider.init();
 
 
 });
