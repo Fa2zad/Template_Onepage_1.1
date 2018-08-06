@@ -89,6 +89,45 @@
         nav{
             height: unset;
             padding: 10px;
+            .header-separator{
+                display: none;
+            }
+            .header-menu{
+                width: 100%;
+                ul{
+                    margin: 0px;
+                    width: 100%;
+                    li{
+                        float: unset;
+                        width: 100%;
+                    }
+                }
+            }
+            .header-user{
+                float: unset;
+                margin-top: 0px;
+                ul{
+                    margin: 0px;
+                }
+            }
+            .header-search{
+                float: unset;
+                margin-top: 0px;
+                .navbar-form{
+                    padding: 0px 14px;
+                    input{
+                        width: 100%; 
+                        padding: 3px 32px 3px 6px;
+                        border: 1px solid $themeColor;
+                    }
+
+                    a{
+                        position: absolute;
+                        margin-top: 7px;
+                        margin-right: 10px;
+                    }
+                }
+            }
         }
     }
 

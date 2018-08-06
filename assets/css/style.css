@@ -1291,6 +1291,44 @@ body .theme-button--big {
     height: unset;
     padding: 10px;
   }
+  .header__container nav .header-separator {
+    display: none;
+  }
+  .header__container nav .header-menu {
+    width: 100%;
+  }
+  .header__container nav .header-menu ul {
+    margin: 0px;
+    width: 100%;
+  }
+  .header__container nav .header-menu ul li {
+    float: unset;
+    width: 100%;
+  }
+  .header__container nav .header-user {
+    float: unset;
+    margin-top: 0px;
+  }
+  .header__container nav .header-user ul {
+    margin: 0px;
+  }
+  .header__container nav .header-search {
+    float: unset;
+    margin-top: 0px;
+  }
+  .header__container nav .header-search .navbar-form {
+    padding: 0px 14px;
+  }
+  .header__container nav .header-search .navbar-form input {
+    width: 100%;
+    padding: 3px 32px 3px 6px;
+    border: 1px solid #ed484b;
+  }
+  .header__container nav .header-search .navbar-form a {
+    position: absolute;
+    margin-top: 7px;
+    margin-right: 10px;
+  }
   .slider__container ul li figure {
     top: 10%;
   }
