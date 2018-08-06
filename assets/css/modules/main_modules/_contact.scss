@@ -8,6 +8,7 @@
         width: 100%;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         overflow: hidden;
         direction: ltr;
         >div {
@@ -16,6 +17,7 @@
             &:nth-child(1) {
                 // map
                 background-color: #e5e3df;
+                min-height: 300px;
             }
             &.contact-info {
                 background-color: #eeeeee;

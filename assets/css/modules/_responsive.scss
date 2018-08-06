@@ -216,6 +216,16 @@
         }
     }
 
+    //contact
+    .contact__container{
+        > div > div{
+            width: 100%;
+        }
+        .contact-triangle, .contact-triangleshadow{
+            display: none;
+        }
+    }
+
     //footer
     .footer__container{
         >section:first-child .footer-modules >div{
@@ -326,11 +336,14 @@
     .parallax__container{
         padding: 30px 0px;
         background-size: 100% 100%;
-        ul li img{
-            // /width: 75%;
-        }
     }
 
+    //contact
+    .contact__container{
+        > div > div.contact-info .contact-info-columns > div{
+            width: 100%;
+        }
+    }
 }
 
 

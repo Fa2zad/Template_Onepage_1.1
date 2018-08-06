@@ -908,6 +908,8 @@ body .theme-button--big {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   overflow: hidden;
   direction: ltr;
 }
@@ -919,6 +921,7 @@ body .theme-button--big {
 
 .contact__container > div > div:nth-child(1) {
   background-color: #e5e3df;
+  min-height: 300px;
 }
 
 .contact__container > div > div.contact-info {
@@ -1357,6 +1360,12 @@ body .theme-button--big {
   .parallax__container ul li img {
     width: 75%;
   }
+  .contact__container > div > div {
+    width: 100%;
+  }
+  .contact__container .contact-triangle, .contact__container .contact-triangleshadow {
+    display: none;
+  }
   .footer__container > section:first-child .footer-modules > div {
     width: 100%;
   }
@@ -1421,6 +1430,9 @@ body .theme-button--big {
   .parallax__container {
     padding: 30px 0px;
     background-size: 100% 100%;
+  }
+  .contact__container > div > div.contact-info .contact-info-columns > div {
+    width: 100%;
   }
 }
 
