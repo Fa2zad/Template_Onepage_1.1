@@ -4,7 +4,14 @@
 $(document).ready(function(){
 
     //============ menu ===========//
-    //Menu.init();
+    $(".header-search form a:first-child").on("click",function () {
+        Menu.init(".header__container nav.navbar");
+    });
+    $(".header-search form a:nth-child(2)").on("click",function () {
+        Menu.closeSearch(".header__container nav.navbar");
+    });
+
+
     
     //============ slider ===========//
     Slider.slide('.slider__container', 8000, 1000);

@@ -45,6 +45,10 @@
   font-size: 17px;
 }
 
+.header__container nav .header-search form .header-search-close {
+  display: none;
+}
+
 .header__container nav .header-menu {
   float: right;
   margin-top: 10px;
