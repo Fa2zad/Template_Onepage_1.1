@@ -25,6 +25,13 @@ $(document).ready(function(){
     });
     //============ tablet ===========//
     TabletSlider.init();
+    //============ features ===========//
+    $(".features__container >div:nth-child(2) >div:nth-child(1) div").mouseenter(function () {
+        Features.init($(this).data("image"));
+    });
+    $(".features__container >div:nth-child(2) >div:nth-child(3) div").mouseenter(function () {
+        Features.init($(this).data("image"));
+    });
 
 
 });

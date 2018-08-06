@@ -718,6 +718,14 @@ body .theme-button--big {
   width: 56%;
 }
 
+.features__container > div:nth-child(2) > div:nth-child(2) img {
+  display: none;
+}
+
+.features__container > div:nth-child(2) > div:nth-child(2) img.active {
+  display: inline-block;
+}
+
 .features__container > div:nth-child(2) > div:nth-child(3) {
   width: 22%;
   text-align: left;
