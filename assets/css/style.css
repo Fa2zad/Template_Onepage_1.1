@@ -1290,6 +1290,7 @@ body .theme-button--big {
   .header__container nav {
     height: unset;
     padding: 10px;
+    margin-bottom: 0px;
   }
   .header__container nav .header-separator {
     display: none;
@@ -1322,7 +1323,7 @@ body .theme-button--big {
   .header__container nav .header-search .navbar-form input {
     width: 100%;
     padding: 3px 32px 3px 6px;
-    border: 1px solid #ed484b;
+    border: 1px solid lightgray;
   }
   .header__container nav .header-search .navbar-form a {
     position: absolute;
