@@ -100,13 +100,15 @@
     >section:last-child{
         background-color: #202020;
         .footer-copyright{
+            direction: ltr;
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             padding: 34px 0px 19px;
 
             >div{
                 width: 50%;
-                &:first-child{
+                &:last-child{
                     a{
                         color: #a7a7a7;
                         &:hover{
@@ -114,7 +116,7 @@
                         }
                     }
                 }
-                &:last-child{
+                &:first-child{
                     nav{
                         display: inline-block;
                         float: left;
@@ -163,7 +165,7 @@
                             }// li
                         }// ul
                     }// nav
-                }// &:last-child
+                }// &:first-child
             }// >div
         }// .footer-copyright
     }// >section:last-child

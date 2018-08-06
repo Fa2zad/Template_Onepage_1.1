@@ -344,6 +344,18 @@
             width: 100%;
         }
     }
+
+    //footer
+    .footer__container{
+        > section:last-child .footer-copyright > div{
+            width: 100%;
+            text-align: center;
+            &:first-child nav{
+                float: unset;
+            }
+        }
+        
+    } 
 }
 
 

@@ -1158,6 +1158,7 @@ body .theme-button--big {
 }
 
 .footer__container > section:last-child .footer-copyright {
+  direction: ltr;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1165,6 +1166,8 @@ body .theme-button--big {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 34px 0px 19px;
 }
 
@@ -1172,59 +1175,59 @@ body .theme-button--big {
   width: 50%;
 }
 
-.footer__container > section:last-child .footer-copyright > div:first-child a {
+.footer__container > section:last-child .footer-copyright > div:last-child a {
   color: #a7a7a7;
 }
 
-.footer__container > section:last-child .footer-copyright > div:first-child a:hover {
+.footer__container > section:last-child .footer-copyright > div:last-child a:hover {
   color: #ed484b;
 }
 
-.footer__container > section:last-child .footer-copyright > div:last-child nav {
+.footer__container > section:last-child .footer-copyright > div:first-child nav {
   display: inline-block;
   float: left;
 }
 
-.footer__container > section:last-child .footer-copyright > div:last-child nav ul {
+.footer__container > section:last-child .footer-copyright > div:first-child nav ul {
   list-style-type: none;
   padding: 0px;
 }
 
-.footer__container > section:last-child .footer-copyright > div:last-child nav ul li {
+.footer__container > section:last-child .footer-copyright > div:first-child nav ul li {
   float: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.footer__container > section:last-child .footer-copyright > div:last-child nav ul li a {
+.footer__container > section:last-child .footer-copyright > div:first-child nav ul li a {
   width: 15px;
   height: 15px;
   background-image: url("../images/foorer-social.png");
   background-repeat: no-repeat;
 }
 
-.footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(2) a {
+.footer__container > section:last-child .footer-copyright > div:first-child nav ul li:nth-child(2) a {
   background-position: -15px;
 }
 
-.footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(3) a {
+.footer__container > section:last-child .footer-copyright > div:first-child nav ul li:nth-child(3) a {
   background-position: -30px;
 }
 
-.footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(4) a {
+.footer__container > section:last-child .footer-copyright > div:first-child nav ul li:nth-child(4) a {
   background-position: -45px;
 }
 
-.footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(5) a {
+.footer__container > section:last-child .footer-copyright > div:first-child nav ul li:nth-child(5) a {
   background-position: -60px;
 }
 
-.footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(6) a {
+.footer__container > section:last-child .footer-copyright > div:first-child nav ul li:nth-child(6) a {
   background-position: -75px;
 }
 
-.footer__container > section:last-child .footer-copyright > div:last-child nav ul li:nth-child(7) a {
+.footer__container > section:last-child .footer-copyright > div:first-child nav ul li:nth-child(7) a {
   background-position: -90px;
 }
 
@@ -1433,6 +1436,13 @@ body .theme-button--big {
   }
   .contact__container > div > div.contact-info .contact-info-columns > div {
     width: 100%;
+  }
+  .footer__container > section:last-child .footer-copyright > div {
+    width: 100%;
+    text-align: center;
+  }
+  .footer__container > section:last-child .footer-copyright > div:first-child nav {
+    float: unset;
   }
 }
 
