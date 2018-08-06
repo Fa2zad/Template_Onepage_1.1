@@ -32,7 +32,7 @@
 
 .header__container nav .header-search {
   float: right;
-  margin-top: 7px;
+  margin-top: 9px;
 }
 
 .header__container nav .header-search form input {
@@ -812,6 +812,7 @@ body .theme-button--big {
 .ourteam__container {
   text-align: center;
   padding: 70px 70px 35px;
+  background-color: white;
 }
 
 .ourteam__container > div:first-child p {
