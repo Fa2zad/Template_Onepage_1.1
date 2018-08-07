@@ -2,7 +2,8 @@
 //-------------- document ready --------------//
 ////////////////////////////////////////////////
 $(document).ready(function(){
-
+    //============ smooth ===========//
+    new SmoothScroll();
     //============ menu ===========//
     $(".header-search form a:first-child").on("click",function () {
         Menu.init(".header__container nav.navbar");
