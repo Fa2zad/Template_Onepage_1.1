@@ -5,7 +5,7 @@ var Portfolio = (function () {
     // setImagesHeight elements
 
     /* =================== public methods ================== */
-    // init fadeInOnScroll method
+    // init method
     /** @description Fade in element. For use first change style of element to ( opacity: 0; )  
      * @param {string} selector The jquery selector with qoutation.
      * @param {number} duration The duration of animation in ms.  

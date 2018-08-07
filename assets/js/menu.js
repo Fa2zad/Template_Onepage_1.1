@@ -81,23 +81,29 @@ var Menu = (function () {
 
         $(".header-search, .header-search form").animate({
             width: "35px"
-        }, 1000).css("position", "unset");
-        $(".header-search form").css("margin-top", "14px")
+        }, 1000,function () {
+            $(".header-search, .header-search form").css("position", "unset");
+        });
+        $(".header-search form").animate({"margin-top": "12px"}, 500);
         $(".header-search form .form-group").animate({
             width: "30px"
         }, 500);
         $(selector + " .header-search form input").animate({
             width: 0,
             padding: 0
-        }, 500).css("border", "unset");
+        }, 500, function () {
+            $(selector + " .header-search form input").css("border","unset");
+        });
 
         $(selector + " .header-search-close").hide(1);
-
+        $(selector + " .header-search form a").css("opacity", 0);
         $(selector + " .header-search form a").animate({
             opacity: 1,
             top: "0",
             left: "0"
-        }, 500).css("position", "unset");
+        }, 1, function () {
+            $(selector + " .header-search form a").css("position", "unset");
+        });
 
 
 
