@@ -4,17 +4,7 @@ var Parallax = (function () {
     var speed = 1;
     var marginTop = 80;
     /* =================== private methods ================= */
-    // isVisible method
-    $.fn.isVisible = function() {
-        var rect = this[0].getBoundingClientRect();
-        return (
-            (rect.height > 0 || rect.width > 0) &&
-            rect.bottom >= 0 &&
-            rect.right >= 0 &&
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    };
+  
 
     // main parallaxBackground method
     /** @description parallax Background effect.  
@@ -22,17 +12,12 @@ var Parallax = (function () {
      */  
     function parallaxBackground(selector) {
         $(selector).each( function(i){
-          var distance_of_object = $(this).position().top;
-          var bottom_of_window = $(window).scrollTop() + $(window).height();
-          var y= Number.parseInt($(this).css('background-position-y'));
-          if( bottom_of_window > distance_of_object ){
-              //alert(speed);
-              y = y + speed;
-                //alert(y);
-              $(this).css({'background-position-y': y+"%"});
-              parallaxItems(selector);
-            }
-          
+            var y= Number.parseInt($(this).css('background-position-y'));
+            //alert(speed);
+            y = y + (speed*1);
+            //alert(y);
+            $(this).css({'background-position-y': y+"%"});
+            parallaxItems(selector);
       }); 
     }
     
@@ -42,7 +27,13 @@ var Parallax = (function () {
      */  
     function parallaxItems(selector) {
         $(selector).each( function(i){
-            marginTop = marginTop - speed;
+            marginTop = marginTop - speed*0.5;
+            if (marginTop < -20) {
+                marginTop = -20;
+            }
+            if (marginTop > 60) {
+                marginTop = 60;
+            }
             $(this).children().css({'margin-top': marginTop});
       }); 
     }
@@ -51,10 +42,9 @@ var Parallax = (function () {
     /* =================== public methods ================== */
     
     // main init method
-    function init(selector) {
-        var st = $(window).scrollTop();
+    function init(selector, scrollTop) {
         if ($(selector).isVisible()) {
-            if (st > lastScrollTop){
+            if (scrollTop > lastScrollTop){
                 // downscroll code
                 speed = Math.abs(speed);
                 
@@ -62,21 +52,25 @@ var Parallax = (function () {
                 // upscroll code
                 speed = -Math.abs(speed);
             }
-            lastScrollTop = st;
+            lastScrollTop = scrollTop;
 
             parallaxBackground(selector);
         }
         else{
-            $(selector).children().css({'margin-top': "unset"});
+            $(selector).children().css({"margin-top": "unset"});
 
-            if (st > lastScrollTop){
+            if (scrollTop > lastScrollTop){
                 // downscroll code
-                marginTop = 80;
+                marginTop = 60;
+                $(selector).css("background-position-y", "-50%");
+
             } else {
                 // upscroll code
                 marginTop = -20;
+                $(selector).css("background-position-y", "150%");
+
             }
-            lastScrollTop = st;
+            lastScrollTop = scrollTop;
         }
     }
   

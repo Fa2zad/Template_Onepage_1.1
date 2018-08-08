@@ -3,7 +3,10 @@
 ////////////////////////////////////////////////
 var windowHeight;
 
+
+
 $(document).ready(function(){
+
     windowHeight = $(window).height();
     $(".hideme").each(function () {
         if ($(this).offset().top  <  $(window).scrollTop() + windowHeight) {
@@ -41,7 +44,6 @@ $(document).ready(function(){
     $(".features__container >div:nth-child(2) >div:nth-child(3) div").mouseenter(function () {
         Features.init($(this).data("image"));
     });
-
 
 });
 
@@ -93,7 +95,9 @@ $(window).focus(function () {
             $('.colored-contents__container > div').css({opacity: 1, 'padding': '80px 68px 45px'});
         }
 
-        Parallax.init('.parallax__container');
+        //if ($(".parallax__container").offset().top  <  ) {
+            Parallax.init('.parallax__container', lastScrollY + windowHeight);
+        //}
 
       ticking = false;
     };

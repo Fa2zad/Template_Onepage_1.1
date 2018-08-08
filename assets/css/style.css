@@ -859,7 +859,8 @@ body .theme-button--big {
   background-image: url("../images/piano.jpg");
   background-attachment: fixed;
   height: 400px;
-  background-size: 100%;
+  background-size: 110%;
+  background-repeat: no-repeat;
   text-align: center;
   color: #fefefe;
   padding: 80px;
