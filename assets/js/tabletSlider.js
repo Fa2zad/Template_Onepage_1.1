@@ -10,14 +10,15 @@ var TabletSlider = (function () {
     function slide(){
         
         $(".tablet-slider-columns div div img.active").each( function(i){
-                
-                $(this).hide(500).removeClass("active");
-                if ($(this).next().length == 0) {
-                    $(".tablet-slider-columns div div img:first").addClass("active");
-                    $(".tablet-slider-columns div div img").show(500);
-
-                } else{
-                    $(this).next().addClass("active").show(1);
+                if($(".tablet-slider-columns").isVisible()){
+                    $(this).hide(500).removeClass("active");
+                    if ($(this).next().length == 0) {
+                        $(".tablet-slider-columns div div img:first").addClass("active");
+                        $(".tablet-slider-columns div div img").show(500);
+    
+                    } else{
+                        $(this).next().addClass("active").show(1);
+                    }
                 }
         }); 
     }

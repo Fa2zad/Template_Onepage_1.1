@@ -25,39 +25,53 @@ var Slider = (function () {
             animationDurationGlobal = animationDuration;
 
             function slideImagesForward() {
+                if ($(selector).isVisible()) {
+                    currentSlideGlobal = $(selector + " >ul >li.active");
+                    figureGlobal = $(selector + " >ul >li >figure");
+                    nextSlideGlobal = currentSlideGlobal.next();
+                    var figurePadding;
 
-                currentSlideGlobal = $(selector + " >ul >li.active");
-                figureGlobal = $(selector + " >ul >li >figure");
-                nextSlideGlobal = currentSlideGlobal.next();
-                var figurePadding;
+                    bar.animate({
+                        'width': $(window).width()
+                    }, duration, "linear");
 
-                bar.animate({'width':$(window).width()}, duration, "linear");
-                
 
-                if (nextSlideGlobal.length == 0) {
-                    nextSlideGlobal = $(selector + " >ul >li:first");
-                }
-                $(selector).css("background-image", "url("+ $(currentSlideGlobal).children(" img").attr("src") +")");
-                currentSlideGlobal.animate({opacity: 0.0}, animationDuration/2, function(){
-                    currentSlideGlobal.removeClass("active");
-                    figurePadding = $(figureGlobal).innerWidth() - $(figureGlobal).width();
-                    $(figureGlobal).css({padding: 0, opacity: 0.0});
-                    nextSlideGlobal.css({
+                    if (nextSlideGlobal.length == 0) {
+                        nextSlideGlobal = $(selector + " >ul >li:first");
+                    }
+                    $(selector).css("background-image", "url(" + $(currentSlideGlobal).children(" img").attr("src") + ")");
+                    currentSlideGlobal.animate({
+                        opacity: 0.0
+                    }, animationDuration / 2, function () {
+                        currentSlideGlobal.removeClass("active");
+                        figurePadding = $(figureGlobal).innerWidth() - $(figureGlobal).width();
+                        $(figureGlobal).css({
+                            padding: 0,
                             opacity: 0.0
-                        }).addClass("active")
-                        .animate({
-                            opacity: 1.0
-                        }, animationDuration, function () {
-                            
-                            
-                            $(figureGlobal).animate({padding: "0px "+ figurePadding/2 +"%" , opacity: 1.0}, 1000);
-                            bar.css({width: 0});
-                            bar.animate({'width': 0}, 0, "linear");
                         });
-                });
-                
+                        nextSlideGlobal.css({
+                                opacity: 0.0
+                            }).addClass("active")
+                            .animate({
+                                opacity: 1.0
+                            }, animationDuration, function () {
+
+
+                                $(figureGlobal).animate({
+                                    padding: "0px " + figurePadding / 2 + "%",
+                                    opacity: 1.0
+                                }, 1000);
+                                bar.css({
+                                    width: 0
+                                });
+                                bar.animate({
+                                    'width': 0
+                                }, 0, "linear");
+                            });
+                    });
+                }
             }
-            
+
             if (progressBar(false)) {
                 animateInterval = setInterval(slideImagesForward, duration, animationDuration);
             }
@@ -83,15 +97,19 @@ var Slider = (function () {
                 clearInterval(animateInterval);
                 slide(selectorGlobal, durationGlobal, animationDurationGlobal);
             }, 200);
-        }else if (!resizing){
-            bar.animate({'width': $(window).width()}, durationGlobal, "linear");
-            bar.animate({'width': 0}, 0, "linear");
+        } else if (!resizing) {
+            bar.animate({
+                'width': $(window).width()
+            }, durationGlobal, "linear");
+            bar.animate({
+                'width': 0
+            }, 0, "linear");
             currentSlideGlobal = $(selectorGlobal + " >ul >li.active");
             nextSlideGlobal = currentSlideGlobal.next();
             figureGlobal = $(selectorGlobal + " >ul >li >figure");
             return true;
         }
-        
+
     }
     /* =============== export public methods =============== */
     return {

@@ -26,7 +26,7 @@ $(document).ready(function(){
 
     
     //============ slider ===========//
-    Slider.slide('.slider__container', 8000, 1000);
+    Slider.slide(".slider__container", 8000, 1000);
 
     //============ image-contents ===========//
     ImageContents.imageContentsSlide('.image-contents__container', 6000, 1000);

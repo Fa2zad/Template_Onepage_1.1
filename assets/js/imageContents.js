@@ -23,41 +23,48 @@ var ImageContents = (function () {
             durationGlobal = duration;
             animationDurationGlobal = animationDuration;
 
-                var currentSlide = $(selector + " >ul >li.active");
-                currentFigureGloabl = $(currentSlide.children(" figure"));
-                var nextSlide = currentSlide.next();
-                nextFigureGlobal = $(nextSlide.children(" figure"));
-                pGlobal = $(selector + " figure >figcaption p");
+            var currentSlide = $(selector + " >ul >li.active");
+            currentFigureGloabl = $(currentSlide.children(" figure"));
+            var nextSlide = currentSlide.next();
+            nextFigureGlobal = $(nextSlide.children(" figure"));
+            pGlobal = $(selector + " figure >figcaption p");
 
             function slideImagesForward() {
-
-                currentSlide = $(selector + " >ul >li.active");
-                currentFigureGloabl = $(currentSlide.children(" figure"));
-                nextSlide = currentSlide.next();
-                nextFigureGlobal = $(nextSlide.children(" figure"));
-                
-                pGlobal = $(selector + " figure >figcaption p");
-                $(pGlobal).animate({opacity: 0.0, marginRight: '-20px'}, animationDuration);
-
-
-                if (nextSlide.length == 0) {
-                    nextSlide = $(selector + " >ul >li:first");
+                if ($(selector).isVisible()) {
+                    currentSlide = $(selector + " >ul >li.active");
+                    currentFigureGloabl = $(currentSlide.children(" figure"));
+                    nextSlide = currentSlide.next();
                     nextFigureGlobal = $(nextSlide.children(" figure"));
-                }
-                if ($(window).width() > 779){
-                    $(selector).css("background-image", "url("+ $(selector + " >ul >li.active >figure >div >img").attr("src") +")");
-                }else{
-                    $(selector).css("background-image", "none");
-                }
-                currentFigureGloabl.animate({opacity: 0.1}, animationDuration/2, function(){
 
-                    currentSlide.removeClass("active");
+                    pGlobal = $(selector + " figure >figcaption p");
+                    $(pGlobal).animate({
+                        opacity: 0.0,
+                        marginRight: '-20px'
+                    }, animationDuration);
 
-                    nextFigureGlobal.css({opacity: 0.1});
 
-                    nextSlide.addClass("active");
+                    if (nextSlide.length == 0) {
+                        nextSlide = $(selector + " >ul >li:first");
+                        nextFigureGlobal = $(nextSlide.children(" figure"));
+                    }
+                    if ($(window).width() > 779) {
+                        $(selector).css("background-image", "url(" + $(selector + " >ul >li.active >figure >div >img").attr("src") + ")");
+                    } else {
+                        $(selector).css("background-image", "none");
+                    }
+                    currentFigureGloabl.animate({
+                        opacity: 0.1
+                    }, animationDuration / 2, function () {
 
-                    nextFigureGlobal.animate({
+                        currentSlide.removeClass("active");
+
+                        nextFigureGlobal.css({
+                            opacity: 0.1
+                        });
+
+                        nextSlide.addClass("active");
+
+                        nextFigureGlobal.animate({
                             opacity: 1.0
                         }, animationDuration, function () {
                             $(pGlobal).animate({
@@ -65,8 +72,8 @@ var ImageContents = (function () {
                                 marginRight: "0"
                             }, animationDuration);
                         });
-                });
-                
+                    });
+                }
             }
 
             animateInterval = setInterval(slideImagesForward, duration, animationDuration);
@@ -75,7 +82,7 @@ var ImageContents = (function () {
 
     }
 
-    function reset(){
+    function reset() {
         clearInterval(animateInterval);
         currentFigureGloabl.clearQueue();
         currentFigureGloabl.stop();
