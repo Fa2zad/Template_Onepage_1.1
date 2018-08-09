@@ -36,11 +36,11 @@ var ImageContents = (function () {
                     nextSlide = currentSlide.next();
                     nextFigureGlobal = $(nextSlide.children(" figure"));
 
-                    pGlobal = $(selector + " figure >figcaption p");
-                    $(pGlobal).animate({
-                        opacity: 0.0,
-                        marginRight: '-20px'
-                    }, animationDuration);
+                    // pGlobal = $(selector + " figure >figcaption p");
+                    // $(pGlobal).animate({
+                    //     opacity: 0.0,
+                    //     marginRight: '-20px'
+                    // }, animationDuration);
 
 
                     if (nextSlide.length == 0) {

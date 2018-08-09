@@ -18,11 +18,25 @@
                 // map
                 background-color: #e5e3df;
                 min-height: 300px;
+                .map-responsive{
+                    overflow:hidden;
+                    padding-bottom:56.25%;
+                    position:relative;
+                    height:100%;
+                }
+                .map-responsive iframe{
+                    left:0;
+                    top:0;
+                    height:100%;
+                    width:100%;
+                    position:absolute;
+                }
             }
             &.contact-info {
                 background-color: #eeeeee;
                 box-shadow: 3px 0px 12px 0px rgba(0, 0, 0, 0.6);
                 padding: 10% 3% 8% 7%;
+                z-index: 0;
                 hr {
                     margin-right: 0px;
                 }

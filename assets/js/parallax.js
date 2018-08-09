@@ -27,12 +27,12 @@ var Parallax = (function () {
      */  
     function parallaxItems(selector) {
         $(selector).each( function(i){
-            marginTop = marginTop - speed*0.5;
-            if (marginTop < -20) {
-                marginTop = -20;
+            marginTop = marginTop - speed*0.4;
+            if (marginTop < -10) {
+                marginTop = -10;
             }
-            if (marginTop > 60) {
-                marginTop = 60;
+            if (marginTop > 40) {
+                marginTop = 40;
             }
             $(this).children().css({'margin-top': marginTop});
       }); 
@@ -61,13 +61,13 @@ var Parallax = (function () {
 
             if (scrollTop > lastScrollTop){
                 // downscroll code
-                marginTop = 60;
-                $(selector).css("background-position-y", "-50%");
+                marginTop = 40;
+                //$(selector).css("background-position-y", "-50%");
 
             } else {
                 // upscroll code
-                marginTop = -20;
-                $(selector).css("background-position-y", "150%");
+                marginTop = -10;
+                $(selector).css("background-position-y", "50%");
 
             }
             lastScrollTop = scrollTop;

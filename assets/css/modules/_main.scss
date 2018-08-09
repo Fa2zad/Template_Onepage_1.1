@@ -8,7 +8,7 @@ body {
     font-family: $regularFont;
     direction: rtl;
     text-align: right;
-    a {
+    p a, figcaption a, footer a{
         color: $linkColor;
         &.active,
         &:active,

@@ -95,9 +95,9 @@ $(window).focus(function () {
             $('.colored-contents__container > div').css({opacity: 1, 'padding': '80px 68px 45px'});
         }
 
-        //if ($(".parallax__container").offset().top  <  ) {
+        if ($(".parallax__container").offset().top  <  lastScrollY + windowHeight) {
             Parallax.init('.parallax__container', lastScrollY + windowHeight);
-        //}
+        }
 
       ticking = false;
     };

@@ -200,7 +200,7 @@
                 &:first-child{
                     margin-bottom: 80px;
                     >div{
-                        margin-left: auto;
+                        margin-left: 29%;
                     }
                     > img
                     {
@@ -218,15 +218,15 @@
         div:nth-child(2) {
             >div{
                 &:nth-child(1){
-                    width: 47%;
+                    width: 100%;
                 }
                 
                 &:nth-child(2){
-                    display: none;
+                    width: 100%
                 }
 
                 &:nth-child(3){
-                    width: 47%;
+                    width: 100%;
                 }
             }
         }
@@ -303,6 +303,9 @@
         .portfolio-buttons{
             margin-right: 30px;
             margin-left: 30px;
+            a{
+                width: calc(50% - 60px);
+            }
         }
         
         ul li{
@@ -322,16 +325,18 @@
     .tablet-slider__container{
         .tablet-slider-columns{
             padding-top: 20px;
+            padding-bottom: 40px;
+
             > div{
                 width: 100%;
                 &:first-child{
                     margin-bottom: 80px;
                     >div{
-                        margin-left: 33px;
+                        left: 23%;
                     }
                     > img
                     {
-                        left: 0;
+                        left: 8%;
                     }
                 }
                 
@@ -355,11 +360,19 @@
                 }
             }
         }
+        > div:nth-child(3) a {
+            width: 95%;
+            margin-bottom: 15px;
+        }
+    }
+    .colored-contents__container h4{
+        line-height: 40px;
     }
 
 
     //ourteam
     .ourteam__container{
+        padding: 70px 30px 35px;
         > div{
             &:first-child p{
                 padding: 0px;
@@ -398,8 +411,113 @@
     } 
 }
 
+//======================(max-width: 657px)
+@media (max-width: 657px) {
+    //tablet-slider
+    .tablet-slider__container{
+        .tablet-slider-columns{
+            > div{
+                &:first-child{
+                    >div{
+                        left: 25%;
+                        margin-left: 27%;
+                    }
+                    > img
+                    {
+                        left: 21%;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+//======================(max-width: 414px)
+@media (max-width: 442px) {
+    .portfolio__container{
+        .portfolio-buttons{
+            a{
+                width: calc(50% - 8px);
+            }
+        }
+    }
+}
 
-//======================(max-width: 576px)
+//======================(max-width: 414px)
+@media (max-width: 414px) {
+    //tablet-slider
+    .tablet-slider__container{
+        .tablet-slider-columns{
+            > div{
+                &:first-child{
+                    >div{
+                        left: 25%;
+                        margin-left: 11%;
+                    }
+                    > img
+                    {
+                        left: 4%;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+//======================(max-width: 375px)
+@media (max-width: 375px) {
+    //tablet-slider
+    .tablet-slider__container{
+        .tablet-slider-columns{
+            > div{
+                &:first-child{
+                    >div{
+                        left: 25%;
+                        margin-left: 7%;
+                    }
+                    > img
+                    {
+                        left: -1%;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    //portfolio
+    .portfolio__container{
+        .portfolio-buttons{
+            a{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    //tablet-slider
+    .tablet-slider__container{
+        .tablet-slider-columns{
+            > div{
+                &:first-child{
+                    >div{
+                        left: 25%;
+                        margin-left: 7%;
+                    }
+                    > img
+                    {
+                        left: -3%;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+//======================(max-width: 320px)
 @media (max-width: 320.95px) { 
     //tablet-slider
     .tablet-slider__container{
@@ -410,17 +528,20 @@
                 &:first-child{
                     margin-bottom: 80px;
                     >div{
-                        width:75%;
+                        width:78%;
                         margin-top: 39px;
+                        height: 327px;
+                        margin-left: 11%;
                     }
                     > img
                     {
                         width: 100%;
+                        left: 1%;
                     }
                 }
                 
             }
         }
     }
-
 }
+
