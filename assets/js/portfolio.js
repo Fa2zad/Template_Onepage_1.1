@@ -30,21 +30,69 @@ var Portfolio = (function () {
 
             });
         } else {
-            $(selector + " >ul >li").each(function () {
+            var displayItems = $(selector + " >ul >li").not("[style*='display: none']");
+            var length = displayItems.length;
+            var duratuonStep= 100;
+            $(displayItems).each(function (index) {
+                $(this).css("transition-duration", "400ms");
+                $(this).css("transition-delay", "0ms");
 
-                $(this).animate({
-                    opacity: 0
-                }, 300).hide(100);
+                setTimeout(() => {
+                    $(this).css({
+                        opacity: 0
+                    });
+                        
+                    if (index === (length - 1)) {
+                        setTimeout(() => {
+                            hideAll();
+                        }, duratuonStep);
+                    }
+                }, duratuonStep);
+                
+                duratuonStep += 150;
 
             });
+            function hideAll() {
 
-            $(selector + " >ul >li." + filter).each(function () {
+                $(displayItems).each(function (index) {
 
-                $(this).show(400).animate({
-                    opacity: 1
-                }, 400);
+                        $(this).hide();
+                    
+                        if (index === (length - 1)) {
+                            setTimeout(() => {
+                                showAll();
+                            }, 500);
+                        }
+                    
+                    
+                });
 
-            });
+                
+            }
+            
+            function showAll(){
+                var filterItems = $(selector + " >ul >li." + filter);
+                var filterItemsLength = filterItems.length;
+                $(filterItems).each(function (index) {
+                    $(filterItems).css("display", "list-item");
+                    $(filterItems).css("transition-delay", "400ms");
+    
+
+                    if (index === (filterItemsLength - 1)) {
+                            opacityShow(filterItems);
+                    }
+
+    
+                });
+            }
+            function opacityShow(filterItems) {
+                $(filterItems).each(function name(params) {
+                    $(filterItems).css({opacity: 1});
+                    
+                })
+            }
+
+            
         }
 
 
